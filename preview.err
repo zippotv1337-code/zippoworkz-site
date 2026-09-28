@@ -1,0 +1,21 @@
+127.0.0.1 - - [27/Sep/2026 21:04:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:03:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:03:13] "GET /assets/site.css HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:03:13] "GET /assets/images/leona-avatar.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:03:13] "GET /assets/images/leona-hero.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:03:14] "GET /assets/images/mara-avatar.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:03:14] "GET /assets/images/mara-hero.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:03:15] code 404, message File not found
+127.0.0.1 - - [28/Sep/2026 10:03:15] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [28/Sep/2026 10:07:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:10:39] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:49] "GET /milo.html HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:50] "GET /impressum.html HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:50] "GET /datenschutz.html HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:50] "GET /nutzungsbedingungen.html HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:59] "GET /milo.html HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:59] "GET /impressum.html HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:59] "GET /datenschutz.html HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 10:22:59] "GET /nutzungsbedingungen.html HTTP/1.1" 200 -
