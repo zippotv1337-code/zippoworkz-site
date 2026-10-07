@@ -21,3 +21,10 @@ Claude Code lädt beide automatisch, wenn in diesem Repo gearbeitet wird.
 ## Update
 
 Neue Version holen: Repo klonen, `skills/taste-skill/SKILL.md` und `skills/redesign-skill/SKILL.md` lesen, Diff prüfen, dann hier ersetzen und den Commit oben anpassen.
+
+## 21st.dev Magic (Komponenten-Generator, `.mcp.json`)
+
+- Ist als MCP-Server `21st-magic` vorbereitet. Der Key kommt **nur aus der Umgebungsvariable `MAGIC_21ST_API_KEY`**, nie aus Git oder dem Chat.
+- **Owner-Gate:** Der Account bei 21st.dev und der Key werden vom Owner angelegt. Es wird nur der Free-/Hobby-Tier genutzt, ein Upgrade gibt es nur mit Freigabe.
+- 21st liefert **React + shadcn/ui + Tailwind**. Für diese Seite dient das nur als Vorlage. Jede Komponente wird in statisches HTML/CSS übersetzt, mit den Taste-Regeln oben. Kein React-Code im Repo.
+- Ohne Key nutzen wir 21st.dev im Browser als Inspirations-Bibliothek, das kostet nichts.
