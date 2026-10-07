@@ -28,3 +28,16 @@ Neue Version holen: Repo klonen, `skills/taste-skill/SKILL.md` und `skills/redes
 - **Owner-Gate:** Der Account bei 21st.dev und der Key werden vom Owner angelegt. Es wird nur der Free-/Hobby-Tier genutzt, ein Upgrade gibt es nur mit Freigabe.
 - 21st liefert **React + shadcn/ui + Tailwind**. Für diese Seite dient das nur als Vorlage. Jede Komponente wird in statisches HTML/CSS übersetzt, mit den Taste-Regeln oben. Kein React-Code im Repo.
 - Ohne Key nutzen wir 21st.dev im Browser als Inspirations-Bibliothek, das kostet nichts.
+
+## web-design-guidelines (Vercel, MIT, lokal gepinnt)
+
+Ordner `web-design-guidelines/`: Prüf-Skill. Sie liefert Befunde im Format `datei:zeile` (Barrierefreiheit, Fokus, Formulare, Bilder, Performance). Die Regeln liegen fest in `GUIDELINES.md` und werden nicht live nachgeladen.
+
+Anpassungen für diese deutsche, statische Seite:
+- **„Title Case“ gilt nicht.** Im Deutschen gilt normale Groß-/Kleinschreibung.
+- **Anführungszeichen deutsch:** „…“ statt “…”.
+- **Gedankenstrich:** Hier gilt die Taste-Regel, also in neuen Texten keiner.
+- **„Zweite Person, keine erste Person“** gilt nur für UI-Texte. Die Firmenstimme („Wir bauen…“) bleibt.
+- React-, Hydration- und Virtualisierungsregeln sind hier nicht relevant.
+
+**Empfohlene Reihenfolge:** zuerst `redesign-skill` (Gestaltung), dann `web-design-guidelines` (Technik/A11y-Prüfung), am Ende die Pre-Flight-Liste aus `taste-skill`.
