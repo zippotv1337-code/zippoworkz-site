@@ -41,3 +41,14 @@ Anpassungen für diese deutsche, statische Seite:
 - React-, Hydration- und Virtualisierungsregeln sind hier nicht relevant.
 
 **Empfohlene Reihenfolge:** zuerst `redesign-skill` (Gestaltung), dann `web-design-guidelines` (Technik/A11y-Prüfung), am Ende die Pre-Flight-Liste aus `taste-skill`.
+
+## Design-Pass 08.10.2026 (Startseite)
+Design-Read: B2B-Dienstleistungsseite für deutsche KMU, vertrauensorientiert, dunkle Marke mit Lime-Akzent beibehalten (Redesign „preserve“). Regler 5/3/4.
+Umgesetzt:
+- Schrift: Geist, lokal gehostet.
+- Hero gekürzt: Lead-Text auf 17 Wörter, Mikrozeile entfernt.
+- Statt 6 Kartenrastern verschiedene Layouts: Problemliste, Kennzahlen, Bento, Zeitleiste, Definitionsliste, Treppe, Q&A.
+- Eyebrows von 10 auf 2 reduziert, keine Gedankenstriche mehr.
+- Eine einzige CTA-Bezeichnung pro Absicht.
+- Technik: Hover- und Active-Zustände, `color-scheme`, `scroll-margin`, `prefers-reduced-motion`; das Mobilmenü schließt nach einem Klick.
+- Zahlen aktualisiert und belegt: 12 Posts und über 350 Tests, Stand 07.10.2026.
