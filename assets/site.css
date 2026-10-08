@@ -66,3 +66,4 @@ section[id],main{scroll-margin-top:88px}
 .ladder{grid-template-columns:1fr}.ladder li:nth-child(n){margin-top:0}.principles.v2{grid-template-columns:1fr}}
 .hero.v2 .eyebrow,.proof.v2 .eyebrow{letter-spacing:.02em;font-size:13px;font-weight:700}.topbar .nav-cta{display:inline-block}@media(max-width:840px){.topbar .nav-cta{display:none}}
 div.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.ladder .price{color:var(--accent);font-weight:700;margin:0 0 8px;font-variant-numeric:tabular-nums}
