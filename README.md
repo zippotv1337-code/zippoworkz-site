@@ -1,22 +1,16 @@
-# Zippoworkz Website
+# Zippoworkz Website — Legacy Redirect
 
-Statische Unternehmensseite von Zippoworkz (AI-Automatisierung & Softwareentwicklung), ausgeliefert über GitHub Pages. Kein Build-Schritt, keine externen Requests.
+Die kanonische und produktive Zippoworkz-Website ist:
 
-## Seiten
-- `index.html` – Startseite: Leistungen, Belege, Portfolio, Arbeitsweise, Über, Anfrage
-- `milo.html` – Kurzvideo-Marke Milo der Zug
-- `impressum.html`, `datenschutz.html`, `nutzungsbedingungen.html` – Rechtstexte (Änderungen nur mit Owner-Freigabe)
-- `404.html`, `robots.txt`, `assets/`
+**https://zippoworkz.higgsfield.app/**
 
-## Lokale Vorschau
-`python -m http.server 8000` im Repo-Ordner, dann `http://127.0.0.1:8000/`.
+Dieses GitHub-Pages-Repository bleibt nur erhalten, damit ältere veröffentlichte Links und Bookmarks zuverlässig auf die aktuelle Website weitergeleitet werden.
 
-## Regeln
-- Alle Dateien UTF-8 ohne BOM.
-- Jedes KI-Bild trägt sichtbar „KI-generiert“.
-- Zahlen nur mit Beleg und Stand-Datum; keine Umsatz-, Reichweiten- oder Fiverr-Zahlen.
-- Keine internen Hostnamen, IPs, Pfade, Tokens oder IDs.
-- Nur Fremdmarken nennen, ohne Logos und ohne Partnerschaftsbehauptung.
+## Kanonische Seiten
+- Start: https://zippoworkz.higgsfield.app/
+- Impressum: https://zippoworkz.higgsfield.app/impressum
+- Datenschutz: https://zippoworkz.higgsfield.app/datenschutz
+- AGB / Nutzungsbedingungen: https://zippoworkz.higgsfield.app/nutzungsbedingungen
+- Widerruf: https://zippoworkz.higgsfield.app/widerruf
 
-## Offen (Owner-Gates)
-Eigene Domain, Formulardienst, Fiverr- und LinkedIn-Link, Rechtstexte-Update. Details im Website-Review des Zippoworkz-Claude-Repos.
+Neue Inhalte, Angebote und Rechtstexte werden ausschließlich auf der Higgsfield-Website gepflegt. GitHub Pages ist keine zweite operative oder rechtliche Quelle mehr.
