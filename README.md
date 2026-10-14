@@ -1,16 +1,17 @@
-# Zippoworkz Website — Legacy Redirect
+# Zippoworkz Website (Webspace-Version)
 
-Die kanonische und produktive Zippoworkz-Website ist:
+Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die Higgsfield-Seite `zippoworkz.higgsfield.app`.
 
-**https://zippoworkz.higgsfield.app/**
+- Reines HTML/CSS/JS, keine Build-Tools, keine externen Requests (Schrift selbst gehostet, keine Cookies, kein Tracking).
+- `.htaccess` für Apache-Webspace (z. B. IONOS): HTTPS, ohne www, Adressen ohne `.html`, Sicherheits-Header, Caching.
+- Hochladen: den kompletten Ordnerinhalt (ohne `.git`, `.claude`, `README.md`) in das Webspace-Root.
 
-Dieses GitHub-Pages-Repository bleibt nur erhalten, damit ältere veröffentlichte Links und Bookmarks zuverlässig auf die aktuelle Website weitergeleitet werden.
+## Vor dem Livegang (Owner-Gates)
 
-## Kanonische Seiten
-- Start: https://zippoworkz.higgsfield.app/
-- Impressum: https://zippoworkz.higgsfield.app/impressum
-- Datenschutz: https://zippoworkz.higgsfield.app/datenschutz
-- AGB / Nutzungsbedingungen: https://zippoworkz.higgsfield.app/nutzungsbedingungen
-- Widerruf: https://zippoworkz.higgsfield.app/widerruf
+1. **Rechtstexte prüfen.** Impressum, Datenschutz, AGB und Widerruf wurden aus den bisherigen Texten neu aufgebaut (Stand 14.10.2026), nicht wörtlich kopiert. Mit den Higgsfield-Originalen abgleichen.
+2. **Hosting im Datenschutz bestätigen.** Angenommen ist IONOS SE inkl. Auftragsverarbeitungsvertrag.
+3. **Meta-App und TikTok-App:** Die hinterlegte Datenschutz-URL auf `https://zippoworkz.com/datenschutz` umstellen.
+4. **E-Mail:** Kontakt läuft noch über `zippoworkz@proton.me`. Nach bestandenem Domain-Mail-Test auf die neue Adresse umstellen (Suchen/Ersetzen in allen `.html`).
+5. **Higgsfield-Seite** danach per Weiterleitung auf `zippoworkz.com` umstellen.
 
-Neue Inhalte, Angebote und Rechtstexte werden ausschließlich auf der Higgsfield-Website gepflegt. GitHub Pages ist keine zweite operative oder rechtliche Quelle mehr.
+`milo.html` ist unverändert (Weiterleitung für die TikTok-Entwickler-Seite) und muss vor dem Abschalten der Higgsfield-Seite neu angelegt werden.
