@@ -1,16 +1,25 @@
-# Zippoworkz Website — Legacy Redirect
+# ZippoWorkz Website (Webspace-Version)
 
-Die kanonische und produktive Zippoworkz-Website ist:
+Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die Higgsfield-Seite `zippoworkz.higgsfield.app`.
 
-**https://zippoworkz.higgsfield.app/**
+- Positionierung (Owner-Entscheidung 14.10.2026): Studio für betriebssichere KI-Workflows (Hauptgeschäft) plus Creator OS (zweites Standbein). Ansprache „wir“ = Inhaber + KI-Team. Rental Toolkit ist nicht mehr auf der Seite.
+- `index.html`: Startseite mit Anfrage-Autopilot (499 €, Umfang aus `zippoworkz/sales/ANFRAGE_AUTOPILOT_499.md`), Betreuung, Creator OS. Zahlen und Tools nur aus `zippoworkz/career/FACTS.md`.
+- `demo.html`: **Kundencenter-Demo** (`assets/portal.js`) mit Tickets, Freigaben, Automationen, Testlauf (`assets/flow.js`), Berichten und Dokumenten. Beispieldaten eines erfundenen Kunden, `noindex`, nicht in Hauptnavigation und Sitemap, nur über den Abschnitt „Betreuung“ und den Footer erreichbar.
+- Rechtstexte, `404.html`, `llms.txt`, `sitemap.xml`, `robots.txt`, `.htaccess`, `assets/og.png`.
+- Die Demo ordnet mit einfachen Regeln ein und läuft komplett im Browser. Es wird nichts gesendet oder gespeichert.
 
-Dieses GitHub-Pages-Repository bleibt nur erhalten, damit ältere veröffentlichte Links und Bookmarks zuverlässig auf die aktuelle Website weitergeleitet werden.
+- Reines HTML/CSS/JS, keine Build-Tools, keine externen Requests (Schrift selbst gehostet, keine Cookies, kein Tracking).
+- `.htaccess` für Apache-Webspace (z. B. IONOS): HTTPS, ohne www, Adressen ohne `.html`, Sicherheits-Header, Caching.
+- Hochladen: Inhalt von `zippoworkz-webspace.zip` (bzw. den Ordner ohne `.git`, `.claude`, `README.md`) in das Webspace-Root.
 
-## Kanonische Seiten
-- Start: https://zippoworkz.higgsfield.app/
-- Impressum: https://zippoworkz.higgsfield.app/impressum
-- Datenschutz: https://zippoworkz.higgsfield.app/datenschutz
-- AGB / Nutzungsbedingungen: https://zippoworkz.higgsfield.app/nutzungsbedingungen
-- Widerruf: https://zippoworkz.higgsfield.app/widerruf
+## Vor dem Livegang (Owner-Gates)
 
-Neue Inhalte, Angebote und Rechtstexte werden ausschließlich auf der Higgsfield-Website gepflegt. GitHub Pages ist keine zweite operative oder rechtliche Quelle mehr.
+1. **Rechtstexte prüfen.** Impressum, Datenschutz, AGB und Widerruf wurden aus den bisherigen Texten neu aufgebaut (Stand 14.10.2026), nicht wörtlich kopiert. Mit den Higgsfield-Originalen abgleichen.
+2. **Hosting im Datenschutz bestätigen.** Angenommen ist IONOS SE inkl. Auftragsverarbeitungsvertrag.
+3. **Meta-App und TikTok-App:** Die hinterlegte Datenschutz-URL auf `https://zippoworkz.com/datenschutz` umstellen.
+4. **E-Mail:** Kontakt läuft noch über `zippoworkz@proton.me`. Nach bestandenem Domain-Mail-Test auf die neue Adresse umstellen (Suchen/Ersetzen in allen `.html`).
+5. **Betreuung:** Monatspreis und Reaktionszeit sind bewusst nicht genannt. Die Werte im Kundencenter („nächster Werktag“, Statistiken) sind als Beispielwerte markiert. Ein echtes Kundenportal mit Login gibt es noch nicht.
+6. **Anfrage-Autopilot:** Der Sales-Entwurf nennt Make/Zapier im Kundenkonto. Das ist auf der Seite bewusst nicht erwähnt, bis die technische Umsetzung entschieden ist.
+7. **Higgsfield-Seite** danach per Weiterleitung auf `zippoworkz.com` umstellen.
+
+`milo.html` ist unverändert (Weiterleitung für die TikTok-Entwickler-Seite) und muss vor dem Abschalten der Higgsfield-Seite neu angelegt werden.
