@@ -37,6 +37,7 @@
   };
 
   var list = document.getElementById("steps");
+  var panel = document.getElementById("panel");
   var status = document.getElementById("note-status");
   var toggle = document.getElementById("note-toggle");
   var tabs = Array.prototype.slice.call(note.querySelectorAll('[role="tab"]'));
@@ -81,7 +82,7 @@
       t.setAttribute("aria-selected", on ? "true" : "false");
       t.tabIndex = on ? 0 : -1;
     });
-    list.setAttribute("aria-labelledby", tab.id);
+    panel.setAttribute("aria-labelledby", tab.id);
     if (focus) tab.focus();
     render(tab.getAttribute("data-flow"));
     play();

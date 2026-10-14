@@ -9,6 +9,19 @@ Vendored aus [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) (MI
 
 Claude Code lädt beide automatisch, wenn in diesem Repo gearbeitet wird.
 
+### Ergänzt am 14.10.2026
+
+| Ordner | Quelle (Lizenz, Commit) | Wofür | Hinweis |
+|---|---|---|---|
+| `impeccable/` | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0, `2f98774`) | `/impeccable audit`, `polish`, `critique`, `craft-floor` | Nur `SKILL.md` + `reference/`. Der `scripts/`-Launcher lädt beim ersten Start ein Binary aus GitHub-Releases herunter und ist bewusst **nicht** enthalten. Die Skill fällt dann auf ihre dokumentierte „Launcher unavailable“-Route zurück. |
+| `ui-ux-pro-max/` | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) (MIT, `7246805`) | Stil-, Farb- und Typo-Datenbank, `scripts/search.py` | Läuft rein lokal (Python, CSV), kein Netzwerk. Aufruf: `python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<query>" --design-system`. Google-Fonts-Empfehlungen hier nur selbst gehostet umsetzen. |
+| `emil-design-eng/`, `review-animations/`, `animation-performance/` | [emilkowalski/skill](https://github.com/emilkowalski/skill) (MIT, `2d22863`) | Animationen prüfen und verfeinern | React/Framer-Beispiele sinngemäß in CSS umsetzen. |
+| `bencium-design-audit/`, `bencium-typography/`, `bencium-controlled-ux-designer/` | [bencium/bencium-claude-code-design-skill](https://github.com/bencium/bencium-claude-code-design-skill) (MIT, `5de46a3`) | Strukturiertes Design-Audit, Typografie | Ordner umbenannt, Skill-Namen mit `bencium-` vorangestellt. |
+
+**Nicht übernommen:**
+- **AccessLint** (accesslint/claude-marketplace): keine Lizenzdatei im Repo, daher nicht vendored. Für A11y-Checks stattdessen axe-core über Playwright (siehe Prüfprotokoll im PR) plus `web-design-guidelines`.
+- **shadcn/ui, Vercel React Best Practices, Vercel Composition Patterns, React Native Skills:** setzen React voraus. Diese Seite ist bewusst statisches HTML/CSS (Regel unten).
+
 ## Was für diese Seite gilt (hat Vorrang vor den Skills)
 
 - **Stack bleibt statisches HTML/CSS** für GitHub Pages. Kein React/Next/Tailwind-Umbau, keine npm-Abhängigkeiten. Die React-/Motion-Beispiele der Skills nur sinngemäß in nativem CSS umsetzen.

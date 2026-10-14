@@ -70,18 +70,20 @@
       <div class="note-head">
         <p class="note-title" id="note-title">So sieht das konkret aus</p>
         <div class="note-tabs" role="tablist" aria-label="Beispielablauf wählen">
-          <button type="button" role="tab" id="tab-anfragen" aria-controls="steps" aria-selected="true" data-flow="anfragen">Anfragen</button>
-          <button type="button" role="tab" id="tab-crm" aria-controls="steps" aria-selected="false" tabindex="-1" data-flow="crm">CRM</button>
-          <button type="button" role="tab" id="tab-uebergabe" aria-controls="steps" aria-selected="false" tabindex="-1" data-flow="uebergabe">Übergaben</button>
+          <button type="button" role="tab" id="tab-anfragen" aria-controls="panel" aria-selected="true" data-flow="anfragen">Anfragen</button>
+          <button type="button" role="tab" id="tab-crm" aria-controls="panel" aria-selected="false" tabindex="-1" data-flow="crm">CRM</button>
+          <button type="button" role="tab" id="tab-uebergabe" aria-controls="panel" aria-selected="false" tabindex="-1" data-flow="uebergabe">Übergaben</button>
         </div>
       </div>
-      <ol class="steps" id="steps" role="tabpanel" aria-labelledby="tab-anfragen">
+      <div id="panel" role="tabpanel" aria-labelledby="tab-anfragen">
+      <ol class="steps" id="steps">
         <li><span class="was">Postfach morgens durchsehen</span><span class="now">Mail, Formular und DM landen an einer Stelle</span></li>
         <li><span class="was">Jede Anfrage lesen und einordnen</span><span class="now">KI sortiert vor: Lead, Support oder Spam</span></li>
         <li><span class="was">Kontakt im CRM von Hand anlegen</span><span class="now">Kontakt und Deal entstehen automatisch</span></li>
         <li class="keep"><span class="was">Antwort an neue Leads freigeben</span><span class="now">Bleibt bei dir. Du siehst den Entwurf und gibst frei.</span></li>
         <li><span class="was">Erinnerung für den Follow-up notieren</span><span class="now">Follow-up wird terminiert und gemeldet</span></li>
       </ol>
+      </div>
       <div class="note-foot">
         <p id="note-status">Vorher 5 Handgriffe, nachher 1 Freigabe.</p>
         <button type="button" id="note-toggle" aria-controls="note">Vorher zeigen</button>
