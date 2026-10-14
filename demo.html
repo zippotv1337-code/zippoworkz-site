@@ -72,6 +72,7 @@
         <a href="#freigaben" data-go="freigaben"><span class="nl"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Freigaben</span> <span class="count" data-count="approvals"></span></a>
         <a href="#automationen" data-go="automationen"><span class="nl"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="16" cy="12" r="3"/></svg>Automationen</span></a>
         <a href="#testlauf" data-go="testlauf"><span class="nl"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5v-7Z"/></svg>Testlauf</span></a>
+        <a href="#szenarien" data-go="szenarien"><span class="nl"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>Szenarien</span></a>
         <a href="#berichte" data-go="berichte"><span class="nl"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg>Berichte</span></a>
         <a href="#dokumente" data-go="dokumente"><span class="nl"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>Dokumente</span></a>
       </nav>
@@ -212,6 +213,23 @@ Jana Köhler</textarea>
     </div>
   </div>
 </div>
+        </section>
+
+        <section data-view="szenarien" id="view-szenarien" aria-labelledby="h-szenarien" hidden>
+          <h2 id="h-szenarien">Szenarien: Was Firmen bei uns beauftragen</h2>
+          <p class="view-intro">Wähle einen typischen Auftrag, beschreib ihn in zwei Sätzen und sieh, wie schnell wir uns melden. Die Zeiten laufen hier im Zeitraffer.</p>
+          <div class="scenarios" id="scenario-list" role="group" aria-label="Szenario wählen"></div>
+          <form class="panel scenario-form" id="scenario-form" novalidate>
+            <h3 id="sc-title">Wähle ein Szenario</h3>
+            <label class="wide">Was brauchst du genau?<textarea id="sc-text" rows="3" placeholder="z. B. Bewerbungen kommen per Mail und per Formular, wir tragen alles von Hand ins CRM ein."></textarea></label>
+            <p class="form-error" id="sc-error" role="alert" hidden>Bitte wähle ein Szenario und beschreib kurz, was du brauchst.</p>
+            <button type="submit" class="btn">Ticket anlegen</button>
+          </form>
+          <div class="panel live" id="live" hidden aria-live="polite">
+            <div class="live-head"><h3 id="live-title">Live-Verlauf</h3><span class="pill pill-wait" id="live-clock">0 Min.</span></div>
+            <ol class="live-steps" id="live-steps"></ol>
+            <p class="sla">Beispielwerte der Demo im Zeitraffer. Die echte Reaktionszeit richtet sich nach dem vereinbarten Betreuungspaket.</p>
+          </div>
         </section>
 
         <section data-view="berichte" id="view-berichte" aria-labelledby="h-berichte" hidden>

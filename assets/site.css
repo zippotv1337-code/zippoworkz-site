@@ -613,3 +613,37 @@ input:focus-visible { outline-offset: 0; }
 .portal-nav .nl { display: inline-flex; align-items: center; gap: .6rem; }
 .portal-nav .ic { opacity: .85; }
 .portal-nav a[aria-current="page"] .ic { color: var(--signal); opacity: 1; }
+
+/* Szenarien und Live-Verlauf */
+.scenarios { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1rem 0; }
+.scenario { display: grid; gap: .35rem; text-align: left; padding: 16px; border-radius: var(--r-md); border: 1px solid var(--wire); background: var(--panel); color: var(--ink); font: inherit; cursor: pointer; }
+.scenario span { color: var(--muted); font-size: .92rem; }
+.scenario[aria-pressed="true"] { border-color: var(--signal); box-shadow: 0 0 0 1px var(--signal) inset; }
+.scenario-form label { display: grid; gap: .4rem; margin: .6rem 0; }
+.scenario-form textarea { width: 100%; }
+.live { margin-top: 14px; }
+.live-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.live-steps { list-style: none; margin: 1rem 0 0; padding: 0 0 0 1.4rem; border-left: 2px solid var(--wire); display: grid; gap: 1rem; }
+.live-steps li { position: relative; display: grid; gap: .15rem; color: var(--muted); }
+.live-steps li::before { content: ""; position: absolute; left: calc(-1.4rem - 7px); top: .35rem; width: 12px; height: 12px; border-radius: 50%; background: var(--ground); border: 2px solid var(--wire); }
+.live-steps li.done { color: var(--ink); }
+.live-steps li.done::before { background: var(--done); border-color: var(--done); }
+.live-steps time { font-size: .85rem; color: var(--muted); font-family: var(--mono); }
+
+/* Bewegung: nur ohne Reduced-Motion */
+@media (prefers-reduced-motion: no-preference) {
+  .portal-main > section:not([hidden]) { animation: view-in .35s var(--ease-out) both; }
+  .stats > div, .ticket-list > li, .approval, .automation, .scenario, .panel { animation: view-in .4s var(--ease-out) both; }
+  .stats > div:nth-child(2), .ticket-list > li:nth-child(2), .approval:nth-child(2), .automation:nth-child(2), .scenario:nth-child(2) { animation-delay: .06s; }
+  .stats > div:nth-child(3), .ticket-list > li:nth-child(3), .approval:nth-child(3), .automation:nth-child(3), .scenario:nth-child(3) { animation-delay: .12s; }
+  .stats > div:nth-child(4), .ticket-list > li:nth-child(n+4), .approval:nth-child(n+4) { animation-delay: .18s; }
+  .live-steps li.done { animation: view-in .4s var(--ease-out) both; }
+  .live-steps li.done::before { animation: step-pop .5s var(--ease-out) both; }
+  .scenario, .approval, .automation, .btn { transition: transform .2s var(--ease-out), border-color .2s, box-shadow .2s; }
+  .btn:active, .scenario:active { transform: scale(.97); }
+  @keyframes view-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes step-pop { 0% { transform: scale(.4); } 60% { transform: scale(1.35); } 100% { transform: scale(1); } }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .scenario:hover, .approval:hover, .automation:hover { transform: translateY(-3px); border-color: color-mix(in oklab, var(--signal) 60%, var(--wire)); }
+}

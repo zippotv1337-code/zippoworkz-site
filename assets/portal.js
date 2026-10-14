@@ -202,6 +202,57 @@
     });
   }
 
+
+  // ---------- Szenarien + Live-Verlauf ----------
+  // Beispielwerte im Zeitraffer (1 Demo-Sekunde = 5 Minuten); keine verbindliche Zusage.
+  var scenarios = [
+    { id: "bewerbung", name: "Bewerbungseingang", desc: "Bewerbungen aus Mail und Formular landen sortiert im CRM, Antwortentwurf wartet auf Freigabe.", sample: "Bewerbungen kommen per Mail und Formular, wir tragen alles von Hand ins CRM ein." },
+    { id: "anfragen", name: "Kundenanfragen beantworten", desc: "Anfragen werden eingeordnet, dringende gehen sofort ans Team, der Rest bekommt einen Entwurf.", sample: "Anfragen über Instagram und Mail gehen unter, niemand sieht rechtzeitig, was dringend ist." },
+    { id: "bericht", name: "Wochenbericht automatisch", desc: "Zahlen aus CRM und Postfach werden montags zu einem Bericht für Team und Chef.", sample: "Jeden Montag bauen wir den Wochenbericht aus drei Tabellen zusammen." }
+  ];
+  var picked = null, liveTimer;
+  var steps = [
+    { at: 0, text: "Ticket ist bei uns eingegangen", mail: null },
+    { at: 2, text: "Bestätigung per E-Mail an dich", mail: "Neue E-Mail: „Dein Ticket ist angekommen“" },
+    { at: 30, text: "Erste Antwort mit Rückfragen zu Tools und Zugängen", mail: "Neue E-Mail: „Zwei kurze Rückfragen zu deinem Ablauf“" },
+    { at: 240, text: "Konkreter Vorschlag mit Umfang und Testplan", mail: "Neue E-Mail: „Vorschlag und nächster Schritt“" }
+  ];
+  function fmt(min) { return min < 60 ? min + " Min." : (min / 60) + " Std."; }
+  function renderScenarios() {
+    var box = document.getElementById("scenario-list");
+    if (box.children.length) return;
+    scenarios.forEach(function (s) {
+      box.appendChild(el("button", { type: "button", class: "scenario", "aria-pressed": "false", onclick: function () {
+        picked = s;
+        Array.prototype.forEach.call(box.children, function (b) { b.setAttribute("aria-pressed", b === this ? "true" : "false"); }, this);
+        document.getElementById("sc-title").textContent = s.name;
+        var ta = document.getElementById("sc-text"); if (!ta.value.trim()) ta.value = s.sample; ta.focus();
+      } }, [el("b", { text: s.name }), el("span", { text: s.desc })]));
+    });
+  }
+  function startLive(e) {
+    e.preventDefault();
+    var txt = document.getElementById("sc-text").value.trim(), err = document.getElementById("sc-error");
+    if (!picked || !txt) { err.hidden = false; return; }
+    err.hidden = true;
+    var t = { id: "ZW-" + (state.nextId++), title: picked.name + ": " + txt.slice(0, 60), kind: "Änderungswunsch", prio: "Normal", status: "Neu", updated: "gerade eben", thread: [{ from: "Du", text: txt }] };
+    state.tickets.unshift(t); counts();
+    var live = document.getElementById("live"), list = document.getElementById("live-steps"), clock = document.getElementById("live-clock");
+    document.getElementById("live-title").textContent = t.id + " · Live-Verlauf";
+    live.hidden = false; list.innerHTML = ""; clearTimeout(liveTimer);
+    steps.forEach(function (s) { list.appendChild(el("li", { class: "pending" }, [el("time", { text: "nach " + fmt(s.at) }), el("span", { text: s.text })])); });
+    var i = 0;
+    (function next() {
+      if (i >= steps.length) return;
+      var s = steps[i], li = list.children[i];
+      li.className = "done"; clock.textContent = fmt(s.at);
+      if (i === 1) { t.status = "In Bearbeitung"; t.thread.push({ from: "ZippoWorkz", text: "Danke, ist angekommen. Wir melden uns mit Rückfragen. (Beispielantwort der Demo)" }); counts(); }
+      if (s.mail) toast(s.mail);
+      i++;
+      liveTimer = setTimeout(next, i < steps.length ? Math.min(3500, Math.max(900, (steps[i].at - s.at) * 200)) : 0);
+    })();
+  }
+
   var rendered = {};
   function render(name) {
     counts();
@@ -209,10 +260,12 @@
     if (name === "tickets") renderTickets();
     if (name === "freigaben") renderApprovals();
     if (name === "automationen") renderAutomations();
+    if (name === "szenarien") renderScenarios();
     rendered[name] = true;
   }
 
   document.getElementById("ticket-form").addEventListener("submit", createTicket);
+  document.getElementById("scenario-form").addEventListener("submit", startLive);
   document.getElementById("ticket-filter").addEventListener("change", renderTickets);
   document.querySelectorAll("[data-doc]").forEach(function (btn) {
     btn.addEventListener("click", function () {
