@@ -4,9 +4,9 @@
 
 ## KI-Workflows
 - Ablauf-Check: kostenlos. Ehrliche Einschätzung, ob sich ein Ablauf automatisieren lässt.
-- Anfrage-Autopilot: 499 € einmalig, Umsetzung in der Regel in sieben Arbeitstagen. Ein Eingangskanal (z. B. Postfach oder Kontaktformular), KI-Einordnung in bis zu fünf Kategorien plus Dringlichkeit, Eintrag in ein Zielsystem (z. B. HubSpot oder Google Sheet), Antwortentwurf zur Freigabe ohne automatischen Versand, eine Benachrichtigung, Fehlerpfad. Dazu Testprotokoll mit zehn Beispielanfragen, Dokumentation, 30 Minuten Video-Übergabe, 14 Tage Fehlerbehebung.
-- Betreuung (Betrieb und Anpassungen): monatlich, Umfang nach Absprache. Tickets, Freigaben, Automationen, Berichte und Dokumentation an einem Ort.
-- Individuelle Automation: auf Anfrage, auch über Fiverr.
+- Anfrage-Autopilot: 1.490 € einmalig (Festpreis), Umsetzung in der Regel in sieben Arbeitstagen. Ein Eingangskanal (z. B. Postfach oder Kontaktformular), KI-Einordnung in bis zu fünf Kategorien plus Dringlichkeit, Eintrag in ein Zielsystem (z. B. HubSpot oder Google Sheet), Antwortentwurf zur Freigabe ohne automatischen Versand, eine Benachrichtigung, Fehlerpfad. Dazu Testprotokoll mit zehn Beispielanfragen, Dokumentation, 30 Minuten Video-Übergabe, 14 Tage Fehlerbehebung.
+- Individuelle Workflows: Festpreis nach dem Check, in der Regel ab 3.900 €.
+- Betreuung, monatlich kündbar: Betrieb 290 €/Monat, Betrieb und Ausbau 690 €/Monat (bis 4 Std. Anpassungen), Partner ab 1.490 €/Monat. Zusätzliche Arbeit 120 €/Std. Kundencenter mit Tickets, Freigaben, Automationen, Berichten und Dokumentation.
 
 ## Creator OS
 - Instagram-Publishing über die offizielle Meta-API mit Beleg pro Veröffentlichung und KI-Kennzeichnung.

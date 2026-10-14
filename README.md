@@ -3,7 +3,7 @@
 Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die Higgsfield-Seite `zippoworkz.higgsfield.app`.
 
 - Positionierung (Owner-Entscheidung 14.10.2026): Studio für betriebssichere KI-Workflows (Hauptgeschäft) plus Creator OS (zweites Standbein). Ansprache „wir“ = Inhaber + KI-Team. Rental Toolkit ist nicht mehr auf der Seite.
-- `index.html`: Startseite mit Anfrage-Autopilot (499 €, Umfang aus `zippoworkz/sales/ANFRAGE_AUTOPILOT_499.md`), Betreuung, Creator OS. Zahlen und Tools nur aus `zippoworkz/career/FACTS.md`.
+- `index.html`: Startseite mit Anfrage-Autopilot (1.490 €, Umfang aus `zippoworkz/sales/ANFRAGE_AUTOPILOT_499.md`), Betreuung, Creator OS. Zahlen und Tools nur aus `zippoworkz/career/FACTS.md`.
 - `demo.html`: **Kundencenter-Demo** (`assets/portal.js`) mit Tickets, Freigaben, Automationen, Testlauf (`assets/flow.js`), Berichten und Dokumenten. Beispieldaten eines erfundenen Kunden, `noindex`, nicht in Hauptnavigation und Sitemap, nur über den Abschnitt „Betreuung“ und den Footer erreichbar.
 - Rechtstexte, `404.html`, `llms.txt`, `sitemap.xml`, `robots.txt`, `.htaccess`, `assets/og.png`.
 - Die Demo ordnet mit einfachen Regeln ein und läuft komplett im Browser. Es wird nichts gesendet oder gespeichert.
@@ -18,7 +18,7 @@ Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die 
 2. **Hosting im Datenschutz bestätigen.** Angenommen ist IONOS SE inkl. Auftragsverarbeitungsvertrag.
 3. **Meta-App und TikTok-App:** Die hinterlegte Datenschutz-URL auf `https://zippoworkz.com/datenschutz` umstellen.
 4. **E-Mail:** Kontakt läuft noch über `zippoworkz@proton.me`. Nach bestandenem Domain-Mail-Test auf die neue Adresse umstellen (Suchen/Ersetzen in allen `.html`).
-5. **Betreuung:** Monatspreis und Reaktionszeit sind bewusst nicht genannt. Die Werte im Kundencenter („nächster Werktag“, Statistiken) sind als Beispielwerte markiert. Ein echtes Kundenportal mit Login gibt es noch nicht.
+5. **Preise (Vorschlag 14.10.2026, marktbasiert):** Anfrage-Autopilot 1.490 €, eigene Workflows ab 3.900 €, Betreuung 290 / 690 / ab 1.490 € pro Monat, 120 €/Std. Vor dem Livegang bestätigen; Sales-Dokument und Fiverr-Gig (149–699 USD) passen dann nicht mehr dazu. Ein echtes Kundenportal mit Login gibt es noch nicht.
 6. **Anfrage-Autopilot:** Der Sales-Entwurf nennt Make/Zapier im Kundenkonto. Das ist auf der Seite bewusst nicht erwähnt, bis die technische Umsetzung entschieden ist.
 7. **Higgsfield-Seite** danach per Weiterleitung auf `zippoworkz.com` umstellen.
 
