@@ -18,7 +18,7 @@ Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die 
 2. **Hosting im Datenschutz bestätigen.** Angenommen ist IONOS SE inkl. Auftragsverarbeitungsvertrag.
 3. **Meta-App und TikTok-App:** Die hinterlegte Datenschutz-URL auf `https://zippoworkz.com/datenschutz` umstellen.
 4. **E-Mail:** Kontakt läuft noch über `zippoworkz@proton.me`. Nach bestandenem Domain-Mail-Test auf die neue Adresse umstellen (Suchen/Ersetzen in allen `.html`).
-5. **Preise (Vorschlag 14.10.2026, marktbasiert):** Anfrage-Autopilot 1.490 €, eigene Workflows ab 3.900 €, Betreuung 290 / 690 / ab 1.490 € pro Monat, 120 €/Std. Vor dem Livegang bestätigen; Sales-Dokument und Fiverr-Gig (149–699 USD) passen dann nicht mehr dazu. Ein echtes Kundenportal mit Login gibt es noch nicht.
+5. **Preise (Vorschlag 14.10.2026, marktbasiert):** Anfrage-Autopilot 1.490 €, eigene Workflows ab 3.900 €, Betreuung 490 / 990 / ab 1.990 € pro Monat (angepasst 14.10.2026 an Marktspannen: Einrichtung ca. 1.500-5.000 $, Wartung leicht ca. 1.000-3.500 $/Monat laut Agentur-Preisübersichten, z. B. codewave.com/taskip.net; Richtwert, keine Primärquelle), 120 €/Std. Vor dem Livegang bestätigen; Sales-Dokument und Fiverr-Gig (149–699 USD) passen dann nicht mehr dazu. Ein echtes Kundenportal mit Login gibt es noch nicht.
 6. **Anfrage-Autopilot:** Der Sales-Entwurf nennt Make/Zapier im Kundenkonto. Das ist auf der Seite bewusst nicht erwähnt, bis die technische Umsetzung entschieden ist.
 7. **Higgsfield-Seite** danach per Weiterleitung auf `zippoworkz.com` umstellen.
 
