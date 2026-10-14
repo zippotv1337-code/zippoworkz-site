@@ -23,7 +23,7 @@ Claude Code lädt beide automatisch, wenn in diesem Repo gearbeitet wird.
 | `animate/` | [emilkowalski/skill](https://github.com/emilkowalski/skill) (MIT, `2d22863`) | Neue Animationen von Grund auf | |
 
 **Nicht übernommen:**
-- **AccessLint** (accesslint/claude-marketplace): keine Lizenzdatei im Repo, daher nicht vendored. Für A11y-Checks stattdessen axe-core über Playwright (siehe Prüfprotokoll im PR) plus `web-design-guidelines`.
+- **AccessLint:** nicht vendored (keine Lizenzdatei im Repo), aber seit 14.10.2026 als Plugin eingebunden (`accesslint@accesslint`, Scope Projekt, siehe `.claude/settings.json`). Zusätzlich bleiben axe-core über Playwright und `web-design-guidelines` die Prüfgrundlage. Das Plugin wird zur Laufzeit aus dem Marketplace geladen; Befunde sind Hinweise, die Barrierefreiheit gilt erst nach axe-Lauf als geprüft.
 - **shadcn/ui, Vercel React Best Practices, Vercel Composition Patterns, React Native Skills:** setzen React voraus. Diese Seite ist bewusst statisches HTML/CSS (Regel unten).
 
 ## Was für diese Seite gilt (hat Vorrang vor den Skills)
