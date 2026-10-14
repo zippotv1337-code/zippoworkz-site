@@ -3,21 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Zippoworkz | Workflow-Automation für Agenturen</title>
+<title>ZippoWorkz | KI-Workflows für Agenturen und Dienstleister</title>
 <meta name="description" content="Ich automatisiere einen Ablauf in deinem Unternehmen: Anfragen, CRM-Pflege oder Übergaben. Quick Start für 499 €, mit Freigabe durch dich an kritischen Stellen.">
 <link rel="canonical" href="https://zippoworkz.com/">
-<meta name="theme-color" content="#0b1739" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f3f5fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#00020f">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
-<meta property="og:site_name" content="Zippoworkz">
-<meta property="og:title" content="Zippoworkz | Workflow-Automation für Agenturen">
+<meta property="og:site_name" content="ZippoWorkz">
+<meta property="og:title" content="ZippoWorkz | KI-Workflows für Agenturen und Dienstleister">
 <meta property="og:description" content="Ich automatisiere einen Ablauf in deinem Unternehmen: Anfragen, CRM-Pflege oder Übergaben. Quick Start für 499 €, mit Freigabe durch dich an kritischen Stellen.">
 <meta property="og:url" content="https://zippoworkz.com/">
 <meta property="og:image" content="https://zippoworkz.com/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/assets/fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">
 [
@@ -25,7 +28,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": "https://zippoworkz.com/#business",
-  "name": "Zippoworkz",
+  "name": "ZippoWorkz",
   "url": "https://zippoworkz.com/",
   "email": "zippoworkz@proton.me",
   "founder": {
@@ -139,9 +142,10 @@
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<canvas class="stream" id="stream" aria-hidden="true"></canvas>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Zippoworkz Startseite"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2b4fd8"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Zippoworkz</a>
+    <a class="brand" href="/" aria-label="ZippoWorkz Startseite"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f68ff"/><stop offset="1" stop-color="#29a9ff"/></linearGradient></defs><path d="M6 7h20L6 25h20" fill="none" stroke="url(#zg)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg>ZippoWorkz</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="/demo">Demo</a>
       <a href="/#leistungen">Leistungen</a>
@@ -158,14 +162,16 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
     <div class="hero-copy">
-      <h1 id="hero-title">Ich automatisiere den Ablauf, der dich jede Woche Zeit kostet.</h1>
-      <div class="hero-side">
-        <p>Für Agenturen, Recruiting und Dienstleister. Unten siehst du, wie das läuft. Probier es mit einer eigenen Nachricht aus.</p>
-        <div class="actions">
-          <a class="btn" href="mailto:zippoworkz@proton.me?subject=Automation%20Check&amp;body=Hallo%20Philipp%2C%0A%0Adieser%20Ablauf%20kostet%20uns%20gerade%20Zeit%3A%0A%0A-%20Was%20passiert%20heute%20von%20Hand%3F%0A-%20Welche%20Tools%20sind%20beteiligt%3F%0A-%20Wie%20oft%20pro%20Woche%3F%0A-%20Wer%20macht%20es%3F%0A%0AViele%20Gr%C3%BC%C3%9Fe">Ablauf schicken</a>
-          <a class="link" href="#quick-start">Quick Start für 499 €</a>
-        </div>
+      <h1 id="hero-title"><span class="wordmark"><span>Zippo</span>Workz</span><span class="tagline">KI-Workflows &amp; Creator OS</span></h1>
+      <p class="lede">Ich automatisiere den Ablauf, der dich jede Woche Zeit kostet. <strong>Für Agenturen, Recruiting und Dienstleister.</strong></p>
+      <div class="actions">
+        <a class="btn" href="mailto:zippoworkz@proton.me?subject=Automation%20Check&amp;body=Hallo%20Philipp%2C%0A%0Adieser%20Ablauf%20kostet%20uns%20gerade%20Zeit%3A%0A%0A-%20Was%20passiert%20heute%20von%20Hand%3F%0A-%20Welche%20Tools%20sind%20beteiligt%3F%0A-%20Wie%20oft%20pro%20Woche%3F%0A-%20Wer%20macht%20es%3F%0A%0AViele%20Gr%C3%BC%C3%9Fe">Ablauf schicken</a>
+        <a class="link" href="#live-demo">Live-Demo ausprobieren</a>
       </div>
+    </div>
+    <div class="board-lead" id="live-demo">
+      <h2>So fließt eine Anfrage durch deinen Betrieb</h2>
+      <p>Schick eine eigene Nachricht durch und gib die Antwort am Ende selbst frei.</p>
     </div>
     <div class="board" id="board">
   <div class="board-bar">
@@ -385,7 +391,7 @@ Jana Köhler</textarea>
   <div class="wrap about">
     <h2 id="ueber-title" class="reveal">Wer dahintersteckt</h2>
     <div class="reveal">
-      <p>Ich bin Philipp-Pascal Tiburczy und baue Zippoworkz allein, aus Knüllwald in Hessen.</p>
+      <p>Ich bin Philipp-Pascal Tiburczy und baue ZippoWorkz allein, aus Knüllwald in Hessen.</p>
       <p>Mein eigenes Geschäft läuft auf genau den Abläufen, die ich verkaufe: Anfragen, Veröffentlichungen und Übergaben sind automatisiert, Entscheidungen bleiben bei mir. Du hast einen Ansprechpartner, der versteht, was er baut, und der dir ehrlich sagt, wenn sich eine Automation nicht lohnt.</p>
     </div>
   </div>
@@ -420,7 +426,7 @@ Jana Köhler</textarea>
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <p>© 2026 Zippoworkz. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
+    <p>© 2026 ZippoWorkz. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
     <nav aria-label="Rechtliches">
       <a href="/impressum">Impressum</a>
       <a href="/datenschutz">Datenschutz</a>
@@ -429,6 +435,7 @@ Jana Köhler</textarea>
     </nav>
   </div>
 </footer>
+<script src="/assets/stream.js" defer></script>
 <script src="/assets/flow.js" defer></script>
 </body>
 </html>

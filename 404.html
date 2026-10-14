@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Seite nicht gefunden | Zippoworkz</title>
+<title>Seite nicht gefunden | ZippoWorkz</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#0b1739" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f3f5fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#00020f">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/assets/fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<canvas class="stream" id="stream" aria-hidden="true"></canvas>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Zippoworkz Startseite"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2b4fd8"/><path d="M10 10.5h12L10 21.5h12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Zippoworkz</a>
+    <a class="brand" href="/" aria-label="ZippoWorkz Startseite"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f68ff"/><stop offset="1" stop-color="#29a9ff"/></linearGradient></defs><path d="M6 7h20L6 25h20" fill="none" stroke="url(#zg)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg>ZippoWorkz</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="/demo">Demo</a>
       <a href="/#leistungen" aria-current="page">Leistungen</a>
@@ -35,7 +37,7 @@
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <p>© 2026 Zippoworkz. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
+    <p>© 2026 ZippoWorkz. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
     <nav aria-label="Rechtliches">
       <a href="/impressum">Impressum</a>
       <a href="/datenschutz">Datenschutz</a>
@@ -44,5 +46,6 @@
     </nav>
   </div>
 </footer>
+<script src="/assets/stream.js" defer></script>
 </body>
 </html>

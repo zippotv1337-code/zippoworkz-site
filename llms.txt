@@ -1,4 +1,4 @@
-# Zippoworkz
+# ZippoWorkz
 
 > Freelance-Studio für Workflow- und KI-Automation von Philipp-Pascal Tiburczy (Knüllwald, Deutschland). Zielgruppe: Agenturen, Recruiting und Dienstleister. Automatisiert einzelne, klar abgegrenzte Abläufe mit den Tools, die ein Unternehmen schon nutzt, und lässt kritische Schritte von einem Menschen freigeben.
 

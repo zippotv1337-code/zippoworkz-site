@@ -1,4 +1,4 @@
-# Zippoworkz Website (Webspace-Version)
+# ZippoWorkz Website (Webspace-Version)
 
 Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die Higgsfield-Seite `zippoworkz.higgsfield.app`.
 
