@@ -691,6 +691,11 @@ input:focus-visible { outline-offset: 0; }
 .pkg-sub { margin: 0; color: var(--muted); }
 .pkg-shots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
 .pkg-shots i { aspect-ratio: 4 / 5; border-radius: 10px; background: linear-gradient(160deg, color-mix(in oklab, var(--signal) 45%, var(--panel)), color-mix(in oklab, var(--violet) 55%, var(--panel))); opacity: calc(var(--h) / 100); }
+.pkg-shots i:nth-child(1) { --h: 94; }
+.pkg-shots i:nth-child(2) { --h: 91; }
+.pkg-shots i:nth-child(3) { --h: 88; }
+.pkg-shots i:nth-child(4) { --h: 86; }
+.pkg-shots i:nth-child(5) { --h: 84; }
 .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; border-radius: var(--r-sm); overflow: hidden; border: 1px solid var(--wire); }
 .checks li { display: flex; justify-content: space-between; gap: 12px; padding: .55rem .8rem; background: color-mix(in oklab, var(--panel) 96%, transparent); font-size: .95rem; }
 .checks li span { color: var(--muted); } .checks li b { font-weight: 600; text-align: right; }
@@ -724,4 +729,7 @@ input:focus-visible { outline-offset: 0; }
 }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .lab-card:hover { transform: translateY(-4px); border-color: color-mix(in oklab, var(--signal) 55%, var(--wire)); box-shadow: 0 22px 44px -24px rgba(12, 198, 255, .5); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pipeline::after, .pipeline li::before { transition: none; }
 }
