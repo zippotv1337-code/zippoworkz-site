@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Live-Demo | ZippoWorkz</title>
-<meta name="description" content="Probier aus, wie eine Anfrage durch einen automatisierten Ablauf läuft: Eingang, Einordnung, CRM, Team, Antwortentwurf und deine Freigabe.">
+<title>Kundencenter (Demo) | ZippoWorkz</title>
+<meta name="description" content="So betreuen wir Kunden: Tickets, Freigaben, Automationen, Berichte und Dokumente an einem Ort. Demo mit Beispieldaten.">
 <link rel="canonical" href="https://zippoworkz.com/demo">
 <meta name="theme-color" content="#00020f">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="ZippoWorkz">
-<meta property="og:title" content="Live-Demo | ZippoWorkz">
-<meta property="og:description" content="Probier aus, wie eine Anfrage durch einen automatisierten Ablauf läuft: Eingang, Einordnung, CRM, Team, Antwortentwurf und deine Freigabe.">
+<meta property="og:title" content="Kundencenter (Demo) | ZippoWorkz">
+<meta property="og:description" content="So betreuen wir Kunden: Tickets, Freigaben, Automationen, Berichte und Dokumente an einem Ort. Demo mit Beispieldaten.">
 <meta property="og:url" content="https://zippoworkz.com/demo">
 <meta property="og:image" content="https://zippoworkz.com/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,6 +22,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
+<meta name="robots" content="noindex, follow">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -30,28 +31,125 @@
   <div class="wrap">
     <a class="brand" href="/" aria-label="ZippoWorkz Startseite"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f68ff"/><stop offset="1" stop-color="#29a9ff"/></linearGradient></defs><path d="M6 7h20L6 25h20" fill="none" stroke="url(#zg)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg>ZippoWorkz</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
-      <a href="/demo" aria-current="page">Demo</a>
       <a href="/#leistungen">Leistungen</a>
-      <a href="/#quick-start">Quick Start</a>
-      <a href="/#ablauf">Ablauf</a>
+      <a href="/#autopilot">Anfrage-Autopilot</a>
+      <a href="/#betreuung">Betreuung</a>
+      <a href="/#creator-os">Creator OS</a>
       <a href="/#fragen">Fragen</a>
     </nav>
-    <a class="btn" href="mailto:zippoworkz@proton.me?subject=Automation%20Check&amp;body=Hallo%20Philipp%2C%0A%0Adieser%20Ablauf%20kostet%20uns%20gerade%20Zeit%3A%0A%0A-%20Was%20passiert%20heute%20von%20Hand%3F%0A-%20Welche%20Tools%20sind%20beteiligt%3F%0A-%20Wie%20oft%20pro%20Woche%3F%0A-%20Wer%20macht%20es%3F%0A%0AViele%20Gr%C3%BC%C3%9Fe">Ablauf schicken</a>
+    <a class="btn" href="mailto:zippoworkz@proton.me?subject=Ablauf-Check&amp;body=Hallo%20ZippoWorkz%2C%0A%0Adieser%20Ablauf%20kostet%20uns%20gerade%20Zeit%3A%0A%0A-%20Was%20passiert%20heute%20von%20Hand%3F%0A-%20Welche%20Tools%20sind%20beteiligt%3F%0A-%20Wie%20oft%20pro%20Woche%3F%0A-%20Wer%20macht%20es%3F%0A%0AViele%20Gr%C3%BC%C3%9Fe">Ablauf-Check anfragen</a>
   </div>
 </header>
 
-<main id="inhalt">
-<section class="demo-head" aria-labelledby="demo-title">
+<main id="inhalt" class="portal-page">
+<div id="portal" class="portal">
+
+<section id="portal-gate" class="portal-gate" aria-labelledby="gate-title">
   <div class="wrap">
-    <h1 id="demo-title">Schick eine Nachricht durch den Ablauf.</h1>
-    <p>Diese Demo zeigt, wie ein typischer Anfragen-Ablauf arbeitet. Sie läuft komplett in deinem Browser. Es wird nichts gesendet und nichts gespeichert.</p>
+    <div class="gate-card">
+      <p class="kicker">Kundencenter</p>
+      <h1 id="gate-title">Alles zu deinem Ablauf an einem Ort.</h1>
+      <p>So sieht Betreuung bei ZippoWorkz aus: Tickets mit Verlauf, Freigaben mit einem Klick, Automationen, die du selbst pausieren kannst, Berichte und Dokumentation.</p>
+      <p class="demo-flag"><b>Demo mit Beispieldaten.</b> Der Kunde „Beispiel Recruiting GmbH“ ist erfunden. Alles läuft in deinem Browser, nichts wird gesendet oder gespeichert. Neu laden setzt die Demo zurück.</p>
+      <button type="button" class="btn" id="enter">Demo öffnen</button>
+    </div>
   </div>
 </section>
-<section aria-label="Demo" style="padding-top:0">
+
+<div id="portal-shell" class="portal-shell" hidden>
   <div class="wrap">
-    <div class="board" id="board">
+    <div class="portal-top">
+      <div>
+        <h1 id="portal-title" tabindex="-1">Kundencenter</h1>
+        <p>Beispiel Recruiting GmbH · Betreuung aktiv · Ansprechpartner Philipp-Pascal Tiburczy</p>
+      </div>
+      <span class="pill pill-wait">Demo mit Beispieldaten</span>
+    </div>
+    <div class="portal-body">
+      <nav class="portal-nav" aria-label="Kundencenter">
+        <a href="#uebersicht" data-go="uebersicht">Übersicht</a>
+        <a href="#tickets" data-go="tickets">Tickets <span class="count" data-count="tickets"></span></a>
+        <a href="#freigaben" data-go="freigaben">Freigaben <span class="count" data-count="approvals"></span></a>
+        <a href="#automationen" data-go="automationen">Automationen</a>
+        <a href="#testlauf" data-go="testlauf">Testlauf</a>
+        <a href="#berichte" data-go="berichte">Berichte</a>
+        <a href="#dokumente" data-go="dokumente">Dokumente</a>
+      </nav>
+      <div class="portal-main">
+
+        <section data-view="uebersicht" id="view-uebersicht" aria-labelledby="h-uebersicht">
+          <h2 id="h-uebersicht">Übersicht</h2>
+          <dl class="stats">
+            <div><dt>Wartet auf dich</dt><dd><span id="ov-approvals">3</span> Freigaben</dd></div>
+            <div><dt>Offene Tickets</dt><dd id="ov-tickets">1</dd></div>
+            <div><dt>Anfragen diese Woche</dt><dd>87</dd></div>
+            <div><dt>Eingesparte Zeit, geschätzt</dt><dd>6,5 Std.</dd></div>
+          </dl>
+          <div class="ov-grid">
+            <div class="panel">
+              <h3>Automationen</h3>
+              <ul class="auto-status" id="auto-status"></ul>
+            </div>
+            <div class="panel">
+              <h3>Letzte Aktivität</h3>
+              <ol class="activity">
+                <li><time>09:12</time><span>ZippoWorkz hat auf ZW-1047 geantwortet</span></li>
+                <li><time>08:47</time><span>2 neue Antwortentwürfe warten auf Freigabe</span></li>
+                <li><time>08:30</time><span>Löschanfrage nach DSGVO erkannt, wartet auf Freigabe</span></li>
+                <li><time>gestern</time><span>ZW-1044 erledigt: Vorlage angepasst, 10 Tests bestanden</span></li>
+                <li><time>Mo 07:00</time><span>Wochenbericht KW 41 verschickt</span></li>
+              </ol>
+            </div>
+          </div>
+          <p class="sla">Antwort auf Tickets in der Regel am nächsten Werktag. Bei Ausfällen sofort. <span class="muted">(Beispielwerte, je nach Vereinbarung)</span></p>
+        </section>
+
+        <section data-view="tickets" id="view-tickets" aria-labelledby="h-tickets" hidden>
+          <div class="view-head">
+            <h2 id="h-tickets">Tickets</h2>
+            <label class="inline">Anzeigen
+              <select id="ticket-filter">
+                <option value="alle">Alle</option>
+                <option value="offen">Offen</option>
+                <option value="erledigt">Erledigt</option>
+              </select>
+            </label>
+          </div>
+          <div class="tickets">
+            <ul class="ticket-list" id="ticket-list" aria-label="Ticketliste"></ul>
+            <div class="ticket-detail" id="ticket-detail" aria-live="polite"></div>
+          </div>
+          <form class="ticket-form panel" id="ticket-form" novalidate>
+            <h3>Neues Ticket</h3>
+            <div class="fields">
+              <label class="wide">Worum geht es?<input id="t-title" name="title" autocomplete="off" placeholder="z. B. Neue Kategorie für Initiativbewerbungen"></label>
+              <label>Art<select id="t-kind" name="kind"><option>Fehler</option><option selected>Änderungswunsch</option><option>Frage</option></select></label>
+              <label>Priorität<select id="t-prio" name="prio"><option>Niedrig</option><option selected>Normal</option><option>Hoch</option></select></label>
+              <label class="wide">Beschreibung<textarea id="t-desc" name="desc" rows="3" placeholder="Was ist passiert oder was soll sich ändern?"></textarea></label>
+            </div>
+            <p class="form-error" id="t-error" role="alert" hidden>Bitte gib einen Titel und eine kurze Beschreibung an.</p>
+            <button type="submit" class="btn">Ticket anlegen</button>
+          </form>
+        </section>
+
+        <section data-view="freigaben" id="view-freigaben" aria-labelledby="h-freigaben" hidden>
+          <h2 id="h-freigaben">Freigaben</h2>
+          <p class="view-intro">Alles, was an Kunden rausgeht oder sich nicht rückgängig machen lässt, wartet hier auf dich.</p>
+          <ul class="approval-list" id="approval-list"></ul>
+        </section>
+
+        <section data-view="automationen" id="view-automationen" aria-labelledby="h-automationen" hidden>
+          <h2 id="h-automationen">Automationen</h2>
+          <p class="view-intro">Pausieren stoppt einen Ablauf sofort. Eingänge gehen nicht verloren, sie warten, bis er wieder läuft.</p>
+          <ul class="automation-list" id="automation-list"></ul>
+        </section>
+
+        <section data-view="testlauf" id="view-testlauf" aria-labelledby="h-testlauf" hidden>
+          <h2 id="h-testlauf">Testlauf: Anfrage-Autopilot</h2>
+          <p class="view-intro">Schick eine eigene Nachricht durch den Ablauf und gib die Antwort am Ende selbst frei. So testen wir jede Änderung, bevor sie live geht.</p>
+          <div class="board" id="board">
   <div class="board-bar">
-    <p><strong>Live-Demo.</strong> So läuft eine Anfrage durch einen automatisierten Ablauf.</p>
+    <p><strong>Testlauf.</strong> So läuft eine Anfrage durch den Anfrage-Autopilot.</p>
     <span class="live">Läuft in deinem Browser, nichts wird gesendet</span>
   </div>
   <div class="lanes">
@@ -95,7 +193,7 @@
 
 Viele Grüße
 Jana Köhler</textarea>
-      <p class="hint">Du kannst auch selbst etwas schreiben. In dieser Demo ordnen einfache Regeln ein, im echten Ablauf ein Sprachmodell.</p>
+      <p class="hint">Du kannst auch selbst etwas schreiben. Im Testlauf ordnen einfache Regeln ein, im echten Ablauf ein Sprachmodell.</p>
       <div class="try-row">
         <button type="button" class="btn" id="run">Durchschicken</button>
         <span class="channel"><label for="channel">Kanal</label>
@@ -114,26 +212,107 @@ Jana Köhler</textarea>
     </div>
   </div>
 </div>
-  </div>
-</section>
-<section aria-labelledby="erklaert-title">
-  <div class="wrap">
-    <div class="intro"><h2 id="erklaert-title">Was in den vier Spalten passiert</h2></div>
-    <div class="demo-explain">
-      <div><h3>Eingang</h3><p>Nachrichten aus Postfach, Kontaktformular und Instagram landen an einer Stelle, egal wo sie herkommen.</p></div>
-      <div><h3>Einordnen</h3><p>Ein Sprachmodell erkennt, ob es eine Anfrage, ein Support-Fall, Spam oder unklar ist. Spam verschwindet, ohne dass du ihn siehst.</p></div>
-      <div><h3>Aktionen</h3><p>Der Kontakt landet im CRM, das Team bekommt eine Meldung, und für die Antwort liegt ein Entwurf bereit.</p></div>
-      <div><h3>Freigabe</h3><p>Bevor etwas an Kunden geht, gibst du frei. Unklare Fälle bekommt ein Mensch, nicht der Bot.</p></div>
+        </section>
+
+        <section data-view="berichte" id="view-berichte" aria-labelledby="h-berichte" hidden>
+          <h2 id="h-berichte">Wochenbericht KW 41</h2>
+          <dl class="stats">
+            <div><dt>Anfragen</dt><dd>87</dd></div>
+            <div><dt>Davon Leads</dt><dd>58</dd></div>
+            <div><dt>Freigaben, im Schnitt</dt><dd>nach 38 Min.</dd></div>
+            <div><dt>Fehler</dt><dd>1, behoben</dd></div>
+          </dl>
+          <div class="panel">
+            <h3>Anfragen pro Tag</h3>
+            <svg class="chart" viewBox="0 0 560 220" role="img" aria-labelledby="chart-t"><title id="chart-t">Eingegangene Anfragen pro Tag in KW 41, nach Kategorie</title><line x1="28" x2="532" y1="196" y2="196"/><rect class="c-lead" x="42" y="94" width="44" height="102" rx="3"/><rect class="c-sup" x="42" y="71" width="44" height="23" rx="3"/><rect class="c-oth" x="42" y="60" width="44" height="11" rx="3"/><text x="64" y="214" text-anchor="middle">Mo</text><text class="v" x="64" y="54" text-anchor="middle">24</text><rect class="c-lead" x="114" y="111" width="44" height="85" rx="3"/><rect class="c-sup" x="114" y="94" width="44" height="17" rx="3"/><rect class="c-oth" x="114" y="88" width="44" height="6" rx="3"/><text x="136" y="214" text-anchor="middle">Di</text><text class="v" x="136" y="82" text-anchor="middle">19</text><rect class="c-lead" x="186" y="77" width="44" height="119" rx="3"/><rect class="c-sup" x="186" y="49" width="44" height="28" rx="3"/><rect class="c-oth" x="186" y="37" width="44" height="11" rx="3"/><text x="208" y="214" text-anchor="middle">Mi</text><text class="v" x="208" y="31" text-anchor="middle">28</text><rect class="c-lead" x="258" y="122" width="44" height="74" rx="3"/><rect class="c-sup" x="258" y="111" width="44" height="11" rx="3"/><rect class="c-oth" x="258" y="94" width="44" height="17" rx="3"/><text x="280" y="214" text-anchor="middle">Do</text><text class="v" x="280" y="88" text-anchor="middle">18</text><rect class="c-lead" x="330" y="134" width="44" height="62" rx="3"/><rect class="c-sup" x="330" y="117" width="44" height="17" rx="3"/><rect class="c-oth" x="330" y="111" width="44" height="6" rx="3"/><text x="352" y="214" text-anchor="middle">Fr</text><text class="v" x="352" y="105" text-anchor="middle">15</text><rect class="c-lead" x="402" y="185" width="44" height="11" rx="3"/><rect class="c-oth" x="402" y="179" width="44" height="6" rx="3"/><text x="424" y="214" text-anchor="middle">Sa</text><text class="v" x="424" y="173" text-anchor="middle">3</text><rect class="c-lead" x="474" y="190" width="44" height="6" rx="3"/><text x="496" y="214" text-anchor="middle">So</text><text class="v" x="496" y="184" text-anchor="middle">1</text></svg>
+            <ul class="legend"><li class="c-lead">Leads</li><li class="c-sup">Support</li><li class="c-oth">Unklar, an Mensch</li></ul>
+          </div>
+          <div class="panel">
+            <h3>Was wir diese Woche gemacht haben</h3>
+            <ul class="ticks">
+              <li>Ansprechpartner in allen Antwortvorlagen aktualisiert und mit 10 Testanfragen geprüft</li>
+              <li>Kategorie „Initiativbewerbung“ vorbereitet, Testlauf folgt zur Freigabe</li>
+              <li>Ein Hinweis in der CRM-Pflege: doppelte Mailadresse, zusammengeführt</li>
+            </ul>
+          </div>
+        </section>
+
+        <section data-view="dokumente" id="view-dokumente" aria-labelledby="h-dokumente" hidden>
+          <h2 id="h-dokumente">Dokumente</h2>
+          <div class="doc-tabs" role="group" aria-label="Dokument wählen">
+            <button type="button" data-doc="doc-ablauf" aria-pressed="true">Ablaufbeschreibung</button>
+            <button type="button" data-doc="doc-test" aria-pressed="false">Testprotokoll</button>
+            <button type="button" data-doc="doc-daten" aria-pressed="false">Datenfluss und Zugänge</button>
+            <button type="button" data-doc="doc-notfall" aria-pressed="false">Notfallplan</button>
+          </div>
+          <article class="doc panel" id="doc-ablauf">
+            <h3>Anfrage-Autopilot, Version 1.2</h3>
+            <ol class="steps">
+              <li>Neue Mail an bewerbung@ oder Eintrag im Kontaktformular.</li>
+              <li>Ein Sprachmodell ordnet ein: Lead, Bewerbung, Support, Spam oder unklar, dazu die Dringlichkeit.</li>
+              <li>Leads und Bewerbungen werden im CRM angelegt oder einem bestehenden Kontakt zugeordnet.</li>
+              <li>Für Leads entsteht ein Antwortentwurf. Er wartet unter „Freigaben“.</li>
+              <li>Unklare Fälle gehen mit Begründung an Sara Winter. Spam wird markiert, nicht gelöscht.</li>
+              <li>Schlägt ein Schritt fehl, landet die Anfrage in der Fehlerliste und wir bekommen eine Meldung.</li>
+            </ol>
+          </article>
+          <article class="doc panel" id="doc-test" hidden>
+            <h3>Testprotokoll vom Go-live</h3>
+            <div class="table-wrap" tabindex="0" role="region" aria-label="Testprotokoll">
+            <table>
+              <caption class="sr">Zehn Testanfragen mit erwarteter und tatsächlicher Einordnung</caption>
+              <thead><tr><th scope="col">Nr.</th><th scope="col">Fall</th><th scope="col">Erwartet</th><th scope="col">Ergebnis</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Anfrage Personalberatung</td><td>Lead</td><td class="ok">bestanden</td></tr>
+                <tr><td>2</td><td>Bewerbung mit Anhang</td><td>Bewerbung</td><td class="ok">bestanden</td></tr>
+                <tr><td>3</td><td>Rückfrage zum Angebot</td><td>Lead</td><td class="ok">bestanden</td></tr>
+                <tr><td>4</td><td>Login funktioniert nicht</td><td>Support</td><td class="ok">bestanden</td></tr>
+                <tr><td>5</td><td>Newsletter-Werbung</td><td>Spam</td><td class="ok">bestanden</td></tr>
+                <tr><td>6</td><td>Nur „Hallo?“</td><td>Unklar</td><td class="ok">bestanden</td></tr>
+                <tr><td>7</td><td>Englische Anfrage</td><td>Lead</td><td class="ok">bestanden</td></tr>
+                <tr><td>8</td><td>Löschwunsch nach DSGVO</td><td>Freigabe</td><td class="ok">bestanden</td></tr>
+                <tr><td>9</td><td>CRM nicht erreichbar</td><td>Fehlerpfad</td><td class="ok">bestanden</td></tr>
+                <tr><td>10</td><td>Doppelte Mail</td><td>Zusammenführen</td><td class="ok">bestanden</td></tr>
+              </tbody>
+            </table>
+            </div>
+          </article>
+          <article class="doc panel" id="doc-daten" hidden>
+            <h3>Datenfluss und Zugänge</h3>
+            <dl class="kv">
+              <dt>Liest</dt><dd>Postfach bewerbung@ (nur Lesen), Kontaktformular</dd>
+              <dt>Schreibt</dt><dd>CRM: Kontakte, Deals, Notizen. Keine Löschrechte ohne Freigabe.</dd>
+              <dt>KI-Modell</dt><dd>Nur Betreff und Text der Anfrage, keine Anhänge</dd>
+              <dt>Speichert</dt><dd>Protokoll der Einordnung, 30 Tage, ohne Mailinhalt</dd>
+              <dt>Zugänge</dt><dd>Eigene Schlüssel pro Kunde, verschlüsselt abgelegt, jederzeit widerrufbar</dd>
+            </dl>
+          </article>
+          <article class="doc panel" id="doc-notfall" hidden>
+            <h3>Wenn etwas nicht läuft</h3>
+            <ol class="steps">
+              <li>Unter „Automationen“ den betroffenen Ablauf pausieren. Eingänge warten.</li>
+              <li>Ein Ticket mit Priorität „Hoch“ anlegen.</li>
+              <li>Wir prüfen das Protokoll, beheben den Fehler und schicken einen Testlauf zur Freigabe.</li>
+              <li>Nach deiner Freigabe läuft der Ablauf weiter und arbeitet die wartenden Eingänge ab.</li>
+            </ol>
+          </article>
+        </section>
+
+      </div>
     </div>
   </div>
-</section>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+</div>
+
 <section class="closing" aria-labelledby="schluss-title">
   <div class="wrap">
-    <h2 id="schluss-title">So etwas für deinen Betrieb?</h2>
+    <h2 id="schluss-title">So eine Betreuung für deinen Betrieb?</h2>
     <div>
-      <p>Beschreib mir den Ablauf, der dich Zeit kostet. Du bekommst eine ehrliche Einschätzung, ob sich das lohnt.</p>
-      <a class="btn" href="mailto:zippoworkz@proton.me?subject=Automation%20Check&amp;body=Hallo%20Philipp%2C%0A%0Adieser%20Ablauf%20kostet%20uns%20gerade%20Zeit%3A%0A%0A-%20Was%20passiert%20heute%20von%20Hand%3F%0A-%20Welche%20Tools%20sind%20beteiligt%3F%0A-%20Wie%20oft%20pro%20Woche%3F%0A-%20Wer%20macht%20es%3F%0A%0AViele%20Gr%C3%BC%C3%9Fe">Ablauf schicken</a>
-      <p class="contact">Festpreis für einen Ablauf: <a class="link" href="/#quick-start">Quick Start für 499 €</a></p>
+      <p>Am Anfang steht ein Ablauf. Beschreib uns, was dich Zeit kostet, und du bekommst eine ehrliche Einschätzung.</p>
+      <a class="btn" href="mailto:zippoworkz@proton.me?subject=Ablauf-Check&amp;body=Hallo%20ZippoWorkz%2C%0A%0Adieser%20Ablauf%20kostet%20uns%20gerade%20Zeit%3A%0A%0A-%20Was%20passiert%20heute%20von%20Hand%3F%0A-%20Welche%20Tools%20sind%20beteiligt%3F%0A-%20Wie%20oft%20pro%20Woche%3F%0A-%20Wer%20macht%20es%3F%0A%0AViele%20Gr%C3%BC%C3%9Fe">Ablauf-Check anfragen</a>
+      <p class="contact">Der Einstieg: <a class="link" href="/#autopilot">Anfrage-Autopilot für 499 €</a></p>
     </div>
   </div>
 </section>
@@ -141,7 +320,8 @@ Jana Köhler</textarea>
 <footer class="site-foot">
   <div class="wrap">
     <p>© 2026 ZippoWorkz. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
-    <nav aria-label="Rechtliches">
+    <nav aria-label="Weitere Seiten">
+      <a href="/demo">Kundencenter (Demo)</a>
       <a href="/impressum">Impressum</a>
       <a href="/datenschutz">Datenschutz</a>
       <a href="/nutzungsbedingungen">AGB</a>
@@ -151,5 +331,6 @@ Jana Köhler</textarea>
 </footer>
 <script src="/assets/stream.js" defer></script>
 <script src="/assets/flow.js" defer></script>
+<script src="/assets/portal.js" defer></script>
 </body>
 </html>

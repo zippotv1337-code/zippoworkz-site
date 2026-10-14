@@ -1,20 +1,23 @@
 # ZippoWorkz
 
-> Freelance-Studio für Workflow- und KI-Automation von Philipp-Pascal Tiburczy (Knüllwald, Deutschland). Zielgruppe: Agenturen, Recruiting und Dienstleister. Automatisiert einzelne, klar abgegrenzte Abläufe mit den Tools, die ein Unternehmen schon nutzt, und lässt kritische Schritte von einem Menschen freigeben.
+> Inhaber-geführtes Studio für betriebssichere KI-Workflows aus Knüllwald, Deutschland. Inhaber: Philipp-Pascal Tiburczy, der mit einem Team aus KI-Agenten baut, testet und überwacht; jede Änderung prüft ein Mensch, bevor sie live geht. Zielgruppe: Agenturen, Recruiting und Dienstleister. Zweites Standbein: Creator OS für Social-Media-Betrieb über die offizielle Meta-API.
 
-## Angebot
-- Automation Quick Start: 499 € einmalig. Ein definierter Geschäftsprozess, Tool-Check, Workflow-Konzept, Umsetzung, Tests der kritischen Pfade, menschliche Prüfung wo nötig, dokumentierte Übergabe. Nicht enthalten: weitere Workflows, laufende Kosten für Drittanbieter.
-- AI UGC Starter: 99 €. Social Media Content Pack: 249 €. Rental Profit Toolkit: 19,90 €.
+## KI-Workflows
+- Ablauf-Check: kostenlos. Ehrliche Einschätzung, ob sich ein Ablauf automatisieren lässt.
+- Anfrage-Autopilot: 499 € einmalig, Umsetzung in der Regel in sieben Arbeitstagen. Ein Eingangskanal (z. B. Postfach oder Kontaktformular), KI-Einordnung in bis zu fünf Kategorien plus Dringlichkeit, Eintrag in ein Zielsystem (z. B. HubSpot oder Google Sheet), Antwortentwurf zur Freigabe ohne automatischen Versand, eine Benachrichtigung, Fehlerpfad. Dazu Testprotokoll mit zehn Beispielanfragen, Dokumentation, 30 Minuten Video-Übergabe, 14 Tage Fehlerbehebung.
+- Betreuung (Betrieb und Anpassungen): monatlich, Umfang nach Absprache. Tickets, Freigaben, Automationen, Berichte und Dokumentation an einem Ort.
 - Individuelle Automation: auf Anfrage, auch über Fiverr.
-- Kleinunternehmer nach § 19 UStG, keine Umsatzsteuer.
 
-## Typische Abläufe
-- Anfragen aus E-Mail, Formular und DM sammeln, einordnen und ins CRM übernehmen
-- CRM-Status, Aufgaben und Follow-ups automatisch aktuell halten
-- Interne Übergaben, Freigaben und Statusmeldungen verbinden
+## Creator OS
+- Instagram-Publishing über die offizielle Meta-API mit Beleg pro Veröffentlichung und KI-Kennzeichnung.
+- DM-Assistent mit Übergabe unklarer Fälle an einen Menschen.
+- AI UGC Starter: 99 €. Social Media Content Pack: 249 €.
+
+## Hinweise
+- Kleinunternehmer nach § 19 UStG, keine Umsatzsteuer.
+- Kundenprojekte werden erst mit Zustimmung der Kunden gezeigt.
 
 ## Kontakt
 - E-Mail: zippoworkz@proton.me
 - Website: https://zippoworkz.com/
-- Interaktive Demo eines Anfragen-Ablaufs: https://zippoworkz.com/demo
 - Impressum: https://zippoworkz.com/impressum
