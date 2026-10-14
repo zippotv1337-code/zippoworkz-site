@@ -20,8 +20,6 @@ ErrorDocument 404 /404.html
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.+?)/?$ $1.html [L]
 
-  # Alte Higgsfield-Pfade
-  RewriteRule ^demo/?$ /#leistungen [R=301,NE,L]
 </IfModule>
 
 <IfModule mod_headers.c>

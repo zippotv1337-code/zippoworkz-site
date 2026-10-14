@@ -2,9 +2,14 @@
 
 Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die Higgsfield-Seite `zippoworkz.higgsfield.app`.
 
+- `index.html`: Startseite mit Live-Demo im Kopfbereich (animierter Ablauf, `assets/flow.js`).
+- `demo.html`: dieselbe Demo als eigene Seite mit Erklärung (ersetzt `/demo` der Higgsfield-Seite).
+- Rechtstexte, `404.html`, `llms.txt`, `sitemap.xml`, `robots.txt`, `.htaccess`, `assets/og.png`.
+- Die Demo ordnet mit einfachen Regeln ein und läuft komplett im Browser. Es wird nichts gesendet oder gespeichert.
+
 - Reines HTML/CSS/JS, keine Build-Tools, keine externen Requests (Schrift selbst gehostet, keine Cookies, kein Tracking).
 - `.htaccess` für Apache-Webspace (z. B. IONOS): HTTPS, ohne www, Adressen ohne `.html`, Sicherheits-Header, Caching.
-- Hochladen: den kompletten Ordnerinhalt (ohne `.git`, `.claude`, `README.md`) in das Webspace-Root.
+- Hochladen: Inhalt von `zippoworkz-webspace.zip` (bzw. den Ordner ohne `.git`, `.claude`, `README.md`) in das Webspace-Root.
 
 ## Vor dem Livegang (Owner-Gates)
 
