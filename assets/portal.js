@@ -217,7 +217,7 @@
     { at: 30, text: "Erste Antwort mit Rückfragen zu Tools und Zugängen", mail: "Neue E-Mail: „Zwei kurze Rückfragen zu deinem Ablauf“" },
     { at: 240, text: "Konkreter Vorschlag mit Umfang und Testplan", mail: "Neue E-Mail: „Vorschlag und nächster Schritt“" }
   ];
-  function fmt(min) { return min < 60 ? min + " Min." : (min / 60) + " Std."; }
+  function fmt(min) { return min < 60 ? min + " Min." : (Math.round(min / 6) / 10).toString().replace(".", ",") + " Std."; }
   function renderScenarios() {
     var box = document.getElementById("scenario-list");
     if (box.children.length) return;
@@ -240,17 +240,23 @@
     var live = document.getElementById("live"), list = document.getElementById("live-steps"), clock = document.getElementById("live-clock");
     document.getElementById("live-title").textContent = t.id + " · Live-Verlauf";
     live.hidden = false; list.innerHTML = ""; clearTimeout(liveTimer);
-    steps.forEach(function (s) { list.appendChild(el("li", { class: "pending" }, [el("time", { text: "nach " + fmt(s.at) }), el("span", { text: s.text })])); });
-    var i = 0;
-    (function next() {
-      if (i >= steps.length) return;
-      var s = steps[i], li = list.children[i];
-      li.className = "done"; clock.textContent = fmt(s.at);
-      if (i === 1) { t.status = "In Bearbeitung"; t.thread.push({ from: "ZippoWorkz", text: "Danke, ist angekommen. Wir melden uns mit Rückfragen. (Beispielantwort der Demo)" }); counts(); }
-      if (s.mail) toast(s.mail);
-      i++;
-      liveTimer = setTimeout(next, i < steps.length ? Math.min(3500, Math.max(900, (steps[i].at - s.at) * 200)) : 0);
-    })();
+    steps.forEach(function (s) { list.appendChild(el("li", { class: "pending" }, [el("time", { text: "nach ca. " + fmt(s.at) }), el("span", { text: s.text })])); });
+    // Stetiger Zeitraffer: 0 bis 240 Min. in 12 s. setTimeout statt rAF, damit es auch im Hintergrund-Tab weiterläuft.
+    var total = 240, dur = 12000, t0 = performance.now(), shown = 0;
+    clearTimeout(liveTimer); live.style.setProperty("--p", 0);
+    (function tick(now) {
+      var min = Math.min(total, Math.round((now - t0) / dur * total));
+      clock.textContent = "ca. " + fmt(min);
+      live.style.setProperty("--p", min / total);
+      while (shown < steps.length && steps[shown].at <= min) {
+        var s = steps[shown];
+        list.children[shown].className = "done";
+        if (shown === 1) { t.status = "In Bearbeitung"; t.thread.push({ from: "ZippoWorkz", text: "Danke, ist angekommen. Wir melden uns mit Rückfragen. (Beispielantwort der Demo)" }); counts(); }
+        if (s.mail) toast(s.mail);
+        shown++;
+      }
+      if (min < total) liveTimer = setTimeout(function () { tick(performance.now()); }, 33);
+    })(t0);
   }
 
   var rendered = {};
