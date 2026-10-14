@@ -18,6 +18,10 @@ Claude Code lädt beide automatisch, wenn in diesem Repo gearbeitet wird.
 | `emil-design-eng/`, `review-animations/`, `animation-performance/` | [emilkowalski/skill](https://github.com/emilkowalski/skill) (MIT, `2d22863`) | Animationen prüfen und verfeinern | React/Framer-Beispiele sinngemäß in CSS umsetzen. |
 | `bencium-design-audit/`, `bencium-typography/`, `bencium-controlled-ux-designer/` | [bencium/bencium-claude-code-design-skill](https://github.com/bencium/bencium-claude-code-design-skill) (MIT, `5de46a3`) | Strukturiertes Design-Audit, Typografie | Ordner umbenannt, Skill-Namen mit `bencium-` vorangestellt. |
 
+| `frontend-design/`, `webapp-testing/` | [anthropics/skills](https://github.com/anthropics/skills) (Apache 2.0, `dbd4588`) | Gestaltung neuer Seiten; Playwright-Tests mit lokalem Server | `webapp-testing/scripts/with_server.py` startet nur lokale Server. |
+| `cro/`, `copywriting/`, `copy-editing/`, `seo-audit/`, `ai-seo/`, `schema/`, `site-architecture/`, `pricing/` | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) (MIT, `c7d7dfb`) | Conversion, Texte, SEO, Sichtbarkeit in KI-Suchen, strukturierte Daten, Seitenstruktur, Preisdarstellung | Ohne `evals/`. Keine erfundenen Kundenstimmen oder Zahlen, auch wenn eine Skill sie vorschlägt (Regel unten). |
+| `animate/` | [emilkowalski/skill](https://github.com/emilkowalski/skill) (MIT, `2d22863`) | Neue Animationen von Grund auf | |
+
 **Nicht übernommen:**
 - **AccessLint** (accesslint/claude-marketplace): keine Lizenzdatei im Repo, daher nicht vendored. Für A11y-Checks stattdessen axe-core über Playwright (siehe Prüfprotokoll im PR) plus `web-design-guidelines`.
 - **shadcn/ui, Vercel React Best Practices, Vercel Composition Patterns, React Native Skills:** setzen React voraus. Diese Seite ist bewusst statisches HTML/CSS (Regel unten).
