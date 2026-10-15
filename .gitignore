@@ -2,3 +2,4 @@ preview.err
 preview.log
 __pycache__/
 *.pyc
+dist/
