@@ -20,7 +20,7 @@ Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die 
 1. **Rechtstexte prüfen.** Impressum, Datenschutz, AGB und Widerruf wurden aus den bisherigen Texten neu aufgebaut (Stand 14.10.2026), nicht wörtlich kopiert. Mit den Higgsfield-Originalen abgleichen.
 2. **Hosting im Datenschutz bestätigen.** Angenommen ist IONOS SE inkl. Auftragsverarbeitungsvertrag.
 3. **Meta-App und TikTok-App:** Die hinterlegte Datenschutz-URL auf `https://zippoworkz.com/datenschutz` umstellen.
-4. **E-Mail:** Kontakt läuft über `philipp@zippoworkz.com` (Domain-Mail-Test am 15.10.2026 bestanden, Owner hat den Eingang geprüft). Wer eine andere Adresse will, ersetzt sie in allen `.html` und in `llms.txt`.
+4. **E-Mail:** Öffentlicher Kontakt ist `info@zippoworkz.com` (verbindlich laut `ZIPPOWORKZ_APPLICATION_OUTREACH_POLICY_V1.md` im Superhirn, Owner 15.10.2026; Domain-Mail-Test bestanden). `philipp@`, `sales@`, `payment@` sind interne Funktionspostfächer und stehen nicht auf der Seite.
 5. **Preise (Vorschlag 14.10.2026, marktbasiert):** Anfrage-Autopilot 1.490 €, eigene Workflows ab 3.900 €, Betreuung 490 / 990 / ab 1.990 € pro Monat (angepasst 14.10.2026 an Marktspannen: Einrichtung ca. 1.500-5.000 $, Wartung leicht ca. 1.000-3.500 $/Monat laut Agentur-Preisübersichten, z. B. codewave.com/taskip.net; Richtwert, keine Primärquelle), 120 €/Std. Vor dem Livegang bestätigen; Sales-Dokument und Fiverr-Gig (149–699 USD) passen dann nicht mehr dazu. Ein echtes Kundenportal mit Login gibt es noch nicht.
 6. **Anfrage-Autopilot:** Der Sales-Entwurf nennt Make/Zapier im Kundenkonto. Das ist auf der Seite bewusst nicht erwähnt, bis die technische Umsetzung entschieden ist.
 7. **Higgsfield-Seite** danach per Weiterleitung auf `zippoworkz.com` umstellen.
