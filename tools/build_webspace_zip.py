@@ -36,7 +36,7 @@ def broken_links(names):
         for ref in REF.findall((ROOT / name).read_text(encoding="utf-8")):
             if re.match(r"(https?:|mailto:|tel:|data:|javascript:)", ref):
                 continue
-            target = ref.lstrip("/") or "index.html"
+            target = ref.lstrip("/").removeprefix("./") or "index.html"
             if target not in have and target + ".html" not in have:
                 out.append(f"{name}: {ref}")
     return out

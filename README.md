@@ -11,6 +11,7 @@ Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die 
 - Reines HTML/CSS/JS, keine Build-Tools, keine externen Requests (Schrift selbst gehostet, keine Cookies, kein Tracking).
 - `.htaccess` für Apache-Webspace (z. B. IONOS): HTTPS, ohne www, Adressen ohne `.html`, Sicherheits-Header, Caching.
 - Die Welle (`assets/stream.js`, Canvas) schwingt beim Laden von links herein, zieht durch die Mitte und gleitet nach rechts unten; danach folgt sie dem rechten Rand die Seite hinunter. Weiße Punkte an den Spitzen, am Ende und an den Rändern. Hinter Texten im ersten Bild wird sie leiser. Mit „Bewegung reduzieren“ steht sie still. Test: `tests/wave-regression.cjs` (gleiche Aufrufart wie `tests/README.md`).
+- Alle internen Pfade sind relativ (`assets/...`, `./#leistungen`, `impressum`). Dadurch läuft dieselbe Seite unter der eigenen Domain, auf dem IONOS-Webspace und unter GitHub Pages (`zippotv1337-code.github.io/zippoworkz-site/`). Test: `tests/pages-regression.cjs` (alle Seiten, Desktop und Handy, mit und ohne Unterpfad: gestylt, kein seitlicher Überlauf, jeder interne Link erreichbar).
 - ZIP bauen: `python tools/build_webspace_zip.py` erzeugt `dist/zippoworkz-webspace.zip` (nur Dateien, die die Seite verwendet; prüft vorher alle lokalen Verlinkungen).
 - Hochladen: Inhalt des ZIPs (die Dateien selbst, nicht einen Unterordner) in das Webspace-Root legen, auch die versteckte `.htaccess`. Wenn der Server danach mit „500“ antwortet, in der `.htaccess` zuerst die Zeile `Options -Indexes` entfernen (manche Tarife erlauben sie nicht).
 
