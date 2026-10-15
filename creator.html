@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Creator Studio | ZippoWorkz</title>
+<meta name="description" content="Unser System für KI-Influencer: Inhalte planen, prüfen, freigeben und über die offizielle Meta-API veröffentlichen. Demo mit Beispieldaten.">
+<link rel="canonical" href="https://zippoworkz.com/creator">
+<meta name="theme-color" content="#00020f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="ZippoWorkz">
+<meta property="og:title" content="Creator Studio | ZippoWorkz">
+<meta property="og:description" content="Unser System für KI-Influencer: Inhalte planen, prüfen, freigeben und über die offizielle Meta-API veröffentlichen. Demo mit Beispieldaten.">
+<meta property="og:url" content="https://zippoworkz.com/creator">
+<meta property="og:image" content="https://zippoworkz.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<canvas class="stream" id="stream" aria-hidden="true"></canvas>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="ZippoWorkz Startseite"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f68ff"/><stop offset="1" stop-color="#29a9ff"/></linearGradient></defs><path d="M6 7h20L6 25h20" fill="none" stroke="url(#zg)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg>ZippoWorkz</a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="/#leistungen">Leistungen</a>
+      <a href="/#autopilot">Anfrage-Autopilot</a>
+      <a href="/#betreuung">Betreuung</a>
+      <a href="/#labs">Labs</a>
+      <a href="/#fragen">Fragen</a>
+    </nav>
+    <a class="btn" href="mailto:zippoworkz@proton.me?subject=Ablauf-Check&amp;body=Hallo%20ZippoWorkz%2C%0A%0Adieser%20Ablauf%20kostet%20uns%20gerade%20Zeit%3A%0A%0A-%20Was%20passiert%20heute%20von%20Hand%3F%0A-%20Welche%20Tools%20sind%20beteiligt%3F%0A-%20Wie%20oft%20pro%20Woche%3F%0A-%20Wer%20macht%20es%3F%0A%0AViele%20Gr%C3%BC%C3%9Fe">Ablauf-Check anfragen</a>
+  </div>
+</header>
+
+<main id="inhalt" class="lab-page">
+<section class="lab-hero" aria-labelledby="c-title">
+  <div class="wrap">
+    <p class="kicker">Labs · Creator Studio</p>
+    <h1 id="c-title">Creator Studio für KI-Influencer</h1>
+    <p class="lead">Unser eigenes System, mit dem wir KI-Creator-Figuren betreiben: Inhalte planen, prüfen, freigeben und über die offizielle Meta-API veröffentlichen. Jeder Schritt bleibt belegt, nichts geht ohne Freigabe raus.</p>
+    <p class="lab-note"><b>Demo mit Beispieldaten.</b> Das Paket unten ist ein Muster. Es wird nichts gesendet oder gespeichert.</p>
+  </div>
+</section>
+
+<section aria-labelledby="c-demo-title">
+  <div class="wrap two">
+    <div class="intro reveal">
+      <h2 id="c-demo-title">So sieht ein Paket zur Freigabe aus</h2>
+      <p>Bevor etwas live geht, prüft das System, ob alles da ist. Du siehst die Bildauswahl, die Textfassung und die Zeit. Dann entscheidest du.</p>
+      <ul class="ilist">
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bildauswahl mit Rangfolge und klar verschiedenen Blickwinkeln</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Caption, Hashtags und Sichtbarkeit in einem Paket</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>KI-Kennzeichnung bei Meta ist Standard</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Freigabe lokal, Live-Freigabe getrennt</li>
+      </ul>
+    </div>
+    <article class="pkg reveal" id="pkg" aria-labelledby="pkg-title">
+      <div class="pkg-top"><span class="pill pill-wait" id="pkg-state">Wartet auf Freigabe</span><time>Beispiel · 19:30 Uhr</time></div>
+      <h3 id="pkg-title">5 Dinge, die du über Kaffee nicht wusstest</h3>
+      <p class="pkg-sub">Beispiel-Figur · Karussell mit 5 Slides</p>
+      <div class="pkg-shots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <ul class="checks">
+        <li><span>Karussell</span><b>5 Slides ausgewählt</b></li>
+        <li><span>Caption</span><b>Text vollständig</b></li>
+        <li><span>Zeit</span><b>19:30 Uhr, Europe/Berlin</b></li>
+        <li><span>Blickwinkel</span><b>5 klar verschieden</b></li>
+        <li><span>Sichtbarkeit</span><b>Öffentlich, KI gekennzeichnet</b></li>
+      </ul>
+      <div class="pkg-actions">
+        <button type="button" class="btn" data-pkg="approve">Freigeben</button>
+        <button type="button" class="btn ghost" data-pkg="change">Überarbeiten</button>
+        <button type="button" class="btn ghost" data-pkg="reject">Ablehnen</button>
+      </div>
+      <p class="pkg-msg" id="pkg-msg" role="status" aria-live="polite"></p>
+    </article>
+  </div>
+</section>
+
+<section aria-labelledby="c-more-title">
+  <div class="wrap">
+    <div class="intro reveal"><h2 id="c-more-title">Was dahintersteckt</h2></div>
+    <dl class="proof-list reveal">
+      <div><dt>Zwei KI-Creator-Figuren im Betrieb</dt><dd>Leona Voss und Mara Field, beide als KI gekennzeichnet. Bis Stand 10.10.2026 gibt es 16 belegte Veröffentlichungen über die offizielle Meta-API.</dd></div>
+      <div><dt>DM-Assistent mit Übergabe</dt><dd>Eingehende Nachrichten werden eingeordnet. Unklare Fälle gehen an einen Menschen, nicht an den Bot.</dd></div>
+      <div><dt>Milo, unser Figurenprojekt für Kurzvideos</dt><dd>In Vorbereitung. Kurze Clips mit immer derselben Figur, gebaut auf demselben Freigabe-Prinzip.</dd></div>
+    </dl>
+    <p class="lab-cta reveal"><a class="btn" href="mailto:zippoworkz@proton.me?subject=Frage%20zu%20Creator%20Studio&amp;body=Hallo%20ZippoWorkz%2C%0A%0A%0AViele%20Gr%C3%BC%C3%9Fe">Frage zum Creator Studio</a> <a class="link" href="/#creator-os">Content-Pakete ansehen</a></p>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p>© 2026 ZippoWorkz. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
+    <nav aria-label="Weitere Seiten">
+      <a href="/demo">Kundencenter (Demo)</a>
+      <a href="/creator">Creator Studio</a>
+      <a href="/markets-lab">Markets Lab</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/nutzungsbedingungen">AGB</a>
+      <a href="/widerruf">Widerruf</a>
+    </nav>
+  </div>
+</footer>
+<script src="/assets/stream.js" defer></script>
+<script src="/assets/labs.js" defer></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-// ZippoWorkz: die Welle aus dem Banner. Sie kommt im Kopfbereich herein
+// ZippoWorkz: die Welle aus dem Banner. Sie kommt von oben herein
 // und fließt beim Scrollen die ganze Seite hinunter. Reine Dekoration,
 // rein im Browser, ohne Abhängigkeiten.
 (function () {
@@ -36,20 +36,22 @@
     var mid = heroTop + Math.min(r.height, H) * (narrow ? 0.32 : 0.36);
     var side = narrow ? 0.97 : 0.86;
 
-    // Control points: across the hero like the banner, then down the page.
+    // Control points: the stream enters from the top edge, runs straight down
+    // through the hero with a soft S-curve and then follows the page on the right.
+    var topEdge = heroTop - 320;
     var pts = [
-      [W * (narrow ? 0.0 : 0.34), mid + 10],
-      [W * (narrow ? 0.45 : 0.58), mid - 10],
-      [W * (narrow ? 0.85 : 0.80), mid + 30],
-      [W * side, mid + H * 0.42]
+      [W * (narrow ? 0.80 : 0.66), topEdge],
+      [W * (narrow ? 0.92 : 0.76), heroTop + H * 0.12],
+      [W * (narrow ? 0.84 : 0.72), mid + H * 0.22],
+      [W * side, mid + H * 0.55]
     ];
-    var y = mid + H * 0.45, k = 0;
+    var y = mid + H * 0.58, k = 0;
     while (y < docH + 400) {
       y += narrow ? 520 : 720;
       k++;
       pts.push([W * (side + (k % 2 ? -0.06 : 0.03) * (narrow ? 0.3 : 1)), y]);
     }
-    var ext = [[pts[0][0] - 200, pts[0][1] + 40]].concat(pts, [[pts[pts.length - 1][0], pts[pts.length - 1][1] + 400]]);
+    var ext = [[pts[0][0] + 24, pts[0][1] - 240]].concat(pts, [[pts[pts.length - 1][0], pts[pts.length - 1][1] + 400]]);
     spine = [];
     var s = 0, prev = null;
     for (var i = 1; i < ext.length - 2; i++) {

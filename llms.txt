@@ -21,3 +21,7 @@
 - E-Mail: zippoworkz@proton.me
 - Website: https://zippoworkz.com/
 - Impressum: https://zippoworkz.com/impressum
+
+## Labs (Nebenprojekte)
+- Creator Studio (/creator): System für KI-Influencer, Demo mit Beispieldaten. Veröffentlichung nur mit Freigabe über die offizielle Meta-API.
+- Markets Lab (/markets-lab): Trading-Bot im Paper-Modus. Kein Echtgeld, keine Anlageberatung, keine Renditeangaben.
