@@ -97,7 +97,7 @@
 
     // Texte im ersten Bild: die Welle geht dahinter durch und wird dort leiser, damit nichts schwer lesbar wird.
     quiet = []; quietTop = Infinity; quietBottom = -Infinity;
-    var els = document.querySelectorAll(".wordmark, .tagline, .lede, .hero .btn, .hero .link, .facts dt, .facts dd, main h1");
+    var els = document.querySelectorAll(".wordmark, .tagline, .lede, .hero .btn, .hero .link, .facts dt, .facts dd, main h1, .slide-title, .hero .kicker");
     for (var e = 0; e < els.length; e++) {
       var box = els[e].matches(".btn, .link") ? els[e] : null, b;
       if (box) b = box.getBoundingClientRect();
