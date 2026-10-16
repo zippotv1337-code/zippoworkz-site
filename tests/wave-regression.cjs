@@ -103,3 +103,24 @@ test('Handy: Welle ohne Fehler, auch nach unten gescrollt', async () => {
   assert.deepEqual(problems, []);
   await context.close();
 });
+
+test('Hero-Slider: Pfeile wechseln die Folie, nur die aktive ist bedienbar, reduzierte Bewegung wechselt nie allein', async () => {
+  const state = page => page.evaluate(() => [...document.querySelectorAll('.hero .slide')].map(s => s.classList.contains('is-active') && !s.inert && !s.hasAttribute('aria-hidden')));
+  const { page, context, problems } = await open(1440, 900);
+  assert.deepEqual(await state(page), [true, false, false]);
+  await page.click('.slide-arrow.next');
+  assert.deepEqual(await state(page), [false, true, false]);
+  await page.click('.slide-arrow.prev');
+  await page.click('.slide-arrow.prev');
+  assert.deepEqual(await state(page), [false, false, true], 'von Folie 1 zurück landet auf der letzten');
+  assert.equal(await page.getAttribute('.slide-dot:nth-child(3)', 'aria-current'), 'true');
+  assert.deepEqual(problems, []);
+  await context.close();
+
+  const calm = await open(1440, 900, 'reduce');
+  assert.equal(await calm.page.getAttribute('.slide-pause', 'aria-pressed'), 'true');
+  await calm.page.waitForTimeout(8200);
+  assert.deepEqual(await state(calm.page), [true, false, false], 'kein automatischer Wechsel');
+  assert.deepEqual(calm.problems, []);
+  await calm.context.close();
+});
