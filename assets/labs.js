@@ -20,21 +20,24 @@
     });
   }
 
-  var pipe = document.getElementById("pipeline"), run = document.getElementById("pipe-run");
-  if (pipe && run) {
-    var steps = Array.prototype.slice.call(pipe.children), timer;
-    run.addEventListener("click", function () {
-      clearTimeout(timer);
-      steps.forEach(function (s) { s.classList.remove("on"); });
-      pipe.style.setProperty("--p", 0);
-      var i = 0;
-      (function next() {
-        if (i >= steps.length) { run.textContent = "Nochmal zeigen"; return; }
-        steps[i].classList.add("on");
-        pipe.style.setProperty("--p", (i + 1) / steps.length);
-        i++;
-        timer = setTimeout(next, reduced ? 0 : 750);
-      })();
-    });
+  // Ein Lichtpunkt läuft die Stufen ab, sobald der Ablauf im Bild ist. Bei reduzierter Bewegung bleibt alles still beleuchtet.
+  var pipe = document.getElementById("pipeline");
+  if (pipe && !reduced && "IntersectionObserver" in window) {
+    var steps = Array.prototype.slice.call(pipe.children);
+    var measure = function () {
+      var vertical = steps[1].offsetTop > steps[0].offsetTop;
+      var pos = function (s) { return vertical ? s.offsetTop : s.offsetLeft; };
+      var len = pos(steps[steps.length - 1]) - pos(steps[0]);
+      pipe.style.setProperty("--len", len + "px");
+      steps.forEach(function (s) { s.style.setProperty("--f", (len ? (pos(s) - pos(steps[0])) / len : 0).toFixed(3)); });
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    pipe.classList.add("armed");
+    new IntersectionObserver(function (entries, io) {
+      if (!entries[0].isIntersecting) return;
+      pipe.classList.add("flowing");
+      io.disconnect();
+    }, { threshold: 0.5 }).observe(pipe);
   }
 })();

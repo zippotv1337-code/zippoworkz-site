@@ -58,15 +58,42 @@ test('creator preview works under the actual self-only CSP', async () => {
   } finally { await context.close(); }
 });
 
-test('markets pipeline honors reduced motion while completing its local demo', async () => {
+// Owner 16.10.2026: no 1-5 digits, a light runs the steps on its own; reduced motion shows every step lit and still.
+const pipeState = page => page.locator('#pipeline').evaluate(el => ({
+  cls: el.className,
+  head: getComputedStyle(el, '::before').animationName,
+  len: parseFloat(getComputedStyle(el).getPropertyValue('--len')),
+  lit: [...el.children].map(li => getComputedStyle(li).opacity),
+  marks: [...el.children].map(li => getComputedStyle(li, '::before').content),
+}));
+
+test('markets pipeline: reduced motion keeps every step lit and still', async () => {
   const { context, page, errors, external } = await contextFor('reduce');
   try {
     assert.equal((await page.goto(base + '/markets-lab', { waitUntil: 'networkidle' })).status(), 200);
-    await page.locator('#pipe-run').focus(); await page.keyboard.press('Enter');
-    await page.waitForFunction(() => document.getElementById('pipe-run').textContent === 'Nochmal zeigen');
-    assert.equal(await page.locator('#pipeline li.on').count(), 5);
-    const durations = await page.locator('#pipeline').evaluate(el => [getComputedStyle(el, '::after').transitionDuration, getComputedStyle(el.firstElementChild, '::before').transitionDuration]);
-    assert.ok(durations.every(value => value.split(',').every(part => parseFloat(part) === 0)), 'reduce must disable both line and step transitions');
+    await page.locator('#pipeline').scrollIntoViewIfNeeded(); await page.waitForTimeout(400);
+    const s = await pipeState(page);
+    assert.ok(!/armed|flowing/.test(s.cls), 'no animation classes under reduce');
+    assert.equal(s.head, 'none');
+    assert.deepEqual(s.lit, ['1', '1', '1', '1', '1']);
+    assert.ok(s.marks.every(mark => !/\d/.test(mark)), 'no step digits');
+    assert.deepEqual(errors, []);
+    assert.deepEqual(external, []);
+  } finally { await context.close(); }
+});
+
+test('markets pipeline: light starts in view and lights every step', async () => {
+  const { context, page, errors, external } = await contextFor();
+  try {
+    await page.goto(base + '/markets-lab', { waitUntil: 'networkidle' });
+    assert.ok(/armed/.test((await pipeState(page)).cls), 'steps start dark');
+    await page.locator('#pipeline').scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => document.getElementById('pipeline').classList.contains('flowing'));
+    await page.waitForTimeout(4000);
+    const s = await pipeState(page);
+    assert.equal(s.head, 'pipe-head-y', 'phone layout runs the vertical light');
+    assert.ok(s.len > 100, 'line length measured from the real steps: ' + s.len);
+    assert.deepEqual(s.lit, ['1', '1', '1', '1', '1']);
     assert.deepEqual(errors, []);
     assert.deepEqual(external, []);
   } finally { await context.close(); }
