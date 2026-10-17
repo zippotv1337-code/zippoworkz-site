@@ -1,0 +1,39 @@
+name: Pricing Cutover Regression
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pricing-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run pricing regression
+        run: node --test tests/pricing-regression.cjs
+      - name: Install browser test driver
+        run: npm install --no-save playwright-core
+      - name: Run page regression
+        shell: bash
+        run: |
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$CHROME"
+          ZW_TEST_PLAYWRIGHT_PATH=playwright-core ZW_TEST_BROWSER="$CHROME" node --test tests/pages-regression.cjs
+      - name: Run wave regression
+        shell: bash
+        run: |
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          test -n "$CHROME"
+          ZW_TEST_PLAYWRIGHT_PATH=playwright-core ZW_TEST_BROWSER="$CHROME" node --test tests/wave-regression.cjs
+      - name: Build webspace artifact and validate local links
+        run: python tools/build_webspace_zip.py

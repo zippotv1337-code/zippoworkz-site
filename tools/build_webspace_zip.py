@@ -9,7 +9,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TOP = {"index.html", "creator.html", "markets-lab.html", "demo.html", "milo.html", "impressum.html", "datenschutz.html",
+TOP = {"index.html", "anfragen-automatisieren.html", "creator.html", "markets-lab.html", "demo.html", "milo.html", "impressum.html", "datenschutz.html",
        "nutzungsbedingungen.html", "widerruf.html", "404.html", "llms.txt", "robots.txt", "sitemap.xml", ".htaccess"}
 REF = re.compile(r'(?:href|src)="([^"#?]+)', re.I)
 
