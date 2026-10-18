@@ -21,6 +21,8 @@ jobs:
           python-version: '3.12'
       - name: Run pricing regression
         run: node --test tests/pricing-regression.cjs
+      - name: Run privacy and public-surface regression
+        run: node --test tests/privacy-regression.cjs
       - name: Install browser test driver
         run: npm install --no-save playwright-core
       - name: Run page regression

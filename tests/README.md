@@ -1,5 +1,14 @@
 # Labs browser regression
 
+## Privacy / public-surface regression
+
+    node --test tests/privacy-regression.cjs tests/pricing-regression.cjs
+
+No browser, credentials or external requests required. Checks brand-only marketing
+SEO/demo contacts, legal navigation, public MCP-config exclusion and approved pricing.
+Failure messages for marketing tests contain categories rather than page content.
+Legal document bytes are additionally compared before/after a privacy change.
+
 Run with existing Node, Playwright and Chromium; no package installation is performed by the test.
 
     node --test tests/labs-regression.cjs
