@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-21 — Hosting disclosure and run-through animation
+
+- Privacy policy section 2 now names GitHub Pages as host (live readback: `Server: GitHub.com`, 185.199.108.153); IONOS stays named for domain/DNS/e-mail (MX/NS). Owner/legal review before merge.
+- Anfrage-Autopilot offer shows a CSS-only 4-step run-through (ported from the synthetic superhirn PR149 scene): no new script, static under reduced motion, labelled as example data.
+
 ## 2026-10-18 — Public data minimization
 
 - Remove unnecessary personal founder/profile and postal-address data from general marketing SEO; use brand/team wording in About, FAQ, demo and AI summary.
