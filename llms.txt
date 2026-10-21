@@ -1,6 +1,6 @@
 # ZippoWorkz
 
-> Inhaber-geführtes Studio für betriebssichere KI-Workflows aus Knüllwald, Deutschland. Inhaber: Philipp-Pascal Tiburczy, der mit einem Team aus KI-Agenten baut, testet und überwacht; jede Änderung prüft ein Mensch, bevor sie live geht. Zielgruppe: Agenturen, Recruiting und Dienstleister. Zweites Standbein: Creator OS für Social-Media-Betrieb über die offizielle Meta-API.
+> ZiPPoworkz entwickelt betriebliche KI-Workflows für Agenturen, Recruiting und Dienstleister. Das Team verbindet menschliche Projektverantwortung mit KI-gestützter Umsetzung, Tests und Monitoring. Änderungen werden vor dem Livegang geprüft. Creator OS unterstützt Social-Media-Betrieb über die offizielle Meta-API.
 
 ## KI-Workflows
 - Ablauf-Check: kostenlos. Ehrliche Einschätzung, ob sich ein Ablauf automatisieren lässt.

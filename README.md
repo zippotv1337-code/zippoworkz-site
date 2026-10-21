@@ -1,5 +1,14 @@
 # ZippoWorkz Website (Webspace-Version)
 
+## Datenschutz-/Security-Delta, 18.10.2026
+
+- Live-Readback: GitHub Pages, `main` am Repository-Root, HTTPS erzwungen. Die Apache-/IONOS-Anleitung unten ist ein alternativer Deployment-Pfad, kein Nachweis des aktuellen Hostings oder eines AVV.
+- Marketing, allgemeine SEO-Daten und Demo verwenden die Marke bzw. ein Demo-Team. Pflicht-Rechtstexte wurden nicht verändert; ihre fachliche Prüfung bleibt erforderlich.
+- `.mcp.json` ist ausschließlich lokale, ignorierte Entwickler-Konfiguration und wird nicht mehr getrackt. Die vorhandene lokale Datei bleibt erhalten; keine Credentials in diese Dokumentation übernehmen. Auch der Webspace-ZIP-Builder schließt Entwickler-Konfigurationen aus.
+- Git-Entfernung ist keine Historien-/Cache-Löschung und keine bereits erfolgte Live-Bereinigung. Nach geprüftem Merge/Deployment muss `/.mcp.json` erneut auf Nicht-Auslieferung geprüft werden. Keine automatische Rotation oder History-Rewrite.
+- Die im Apache-Pfad vorgesehenen Header waren beim Live-HEAD-Readback nicht vorhanden. Die lokalen Browserprüfungen emulieren diese CSP; sie beweisen keine live gesetzten Header. Hosting-/Header- und Datenschutz-Abgleich bleiben ein eigener Freigabepunkt, ohne DNS-/Hosting-Änderung durch diesen Patch.
+- Fokussierte Prüfung: `node --test tests/privacy-regression.cjs tests/pricing-regression.cjs`; vorhandene Browserprüfungen siehe `tests/README.md`.
+
 Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die Higgsfield-Seite `zippoworkz.higgsfield.app`.
 
 - Positionierung (Owner-Entscheidung 14.10.2026): Studio für betriebssichere KI-Workflows (Hauptgeschäft) plus Creator OS (zweites Standbein). Ansprache „wir“ = Inhaber + KI-Team. Rental Toolkit ist nicht mehr auf der Seite.

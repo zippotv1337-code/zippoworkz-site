@@ -130,7 +130,7 @@
     var first = r.name ? r.name.split(" ")[0] : "";
     var hello = first ? "Hallo " + first + "," : "Hallo,";
     if (r.type === "lead") {
-      return hello + "\n\ndanke für deine Anfrage. Damit ich das gut einschätzen kann: Welche Tools nutzt ihr heute, und wie oft fällt der Ablauf pro Woche an?\n\nViele Grüße\nPhilipp";
+      return hello + "\n\ndanke für deine Anfrage. Damit ich das gut einschätzen kann: Welche Tools nutzt ihr heute, und wie oft fällt der Ablauf pro Woche an?\n\nViele Grüße\nZiPPoworkz";
     }
     if (r.type === "support") {
       return hello + "\n\ndanke für die Nachricht. Wir schauen uns das an und melden uns mit einer Lösung.\n\nViele Grüße";
