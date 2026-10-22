@@ -49,3 +49,23 @@ test('webspace allowlist still excludes internal developer and credential files'
   assert.ok(allowlist);
   assert.doesNotMatch(allowlist, /\.mcp|\.env|\.git|\.claude/);
 });
+
+test('owner name appears only on legally required pages, and those stay out of search engines', () => {
+  // Owner 22.10.2026: the name must stay where the law needs it (Impressum, Datenschutz, Widerruf, AGB),
+  // but those pages are noindex, not in the sitemap and not blocked in robots.txt (crawlers must see noindex).
+  const legal = ['impressum', 'datenschutz', 'widerruf', 'nutzungsbedingungen'];
+  const name = /Tiburczy/i;
+  const files = fs.readdirSync(root).filter(f => /\.(html|txt|xml|json|js)$/.test(f))
+    .concat(fs.readdirSync(path.join(root, 'assets')).filter(f => /\.(js|json|txt)$/.test(f)).map(f => 'assets/' + f));
+  for (const file of files) {
+    if (!name.test(read(file))) continue;
+    assert.ok(legal.includes(path.basename(file, '.html')), `${file}: Name nur auf Rechtsseiten`);
+  }
+  const sitemap = read('sitemap.xml'), robots = read('robots.txt');
+  for (const page of legal) {
+    assert.match(read(`${page}.html`), /<meta name="robots" content="noindex,follow">/, `${page}: noindex fehlt`);
+    assert.ok(name.test(read(`${page}.html`)), `${page}: gesetzliche Anbieterangabe muss bleiben`);
+    assert.ok(!sitemap.includes(`/${page}<`), `${page}: steht noch in der Sitemap`);
+    assert.ok(!new RegExp(`Disallow:\s*/${page}`, 'i').test(robots), `${page}: robots.txt darf noindex nicht verdecken`);
+  }
+});
