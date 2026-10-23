@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Owner 23.10.2026: Website vorerst nicht in Suchmaschinen; alle Seiten noindex. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zippoworkz.com/</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://zippoworkz.com/anfragen-automatisieren</loc><lastmod>2026-10-16</lastmod></url>
-  <url><loc>https://zippoworkz.com/creator</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://zippoworkz.com/markets-lab</loc><lastmod>2026-10-14</lastmod></url>
 </urlset>

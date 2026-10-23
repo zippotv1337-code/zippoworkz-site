@@ -69,3 +69,11 @@ test('owner name appears only on legally required pages, and those stay out of s
     assert.ok(!new RegExp(`Disallow:\s*/${page}`, 'i').test(robots), `${page}: robots.txt darf noindex nicht verdecken`);
   }
 });
+
+test('whole site stays out of search engines for now (owner 23.10.2026)', () => {
+  // Reversible: remove the robots meta from the marketing pages and restore sitemap entries.
+  for (const file of fs.readdirSync(root).filter(f => f.endsWith('.html')))
+    assert.match(read(file), /<meta name="robots" content="noindex[^"]*">/, `${file}: noindex fehlt`);
+  assert.ok(!/<url>/.test(read('sitemap.xml')), 'Sitemap muss leer sein');
+  assert.ok(!/Disallow:\s*\/\s*$/im.test(read('robots.txt')), 'robots.txt darf nicht sperren, sonst sieht Google das noindex nicht');
+});
