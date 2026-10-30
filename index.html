@@ -25,6 +25,7 @@
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/cinzel-wght.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 <script type="application/ld+json">
 [
@@ -132,6 +133,7 @@
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="scene" data-scene="nebula" aria-hidden="true"><i class="s-nebula"></i><i class="s-grid"></i><i class="s-aurora"></i><i class="s-dawn"></i><i class="s-fog"></i><i class="s-vignette"></i><i class="s-grain"></i></div>
 <canvas class="stream" id="stream" aria-hidden="true"></canvas>
 <header class="site-head">
   <div class="wrap">
@@ -149,7 +151,7 @@
 
 <main id="inhalt">
 
-<section class="hero" aria-labelledby="hero-title">
+<section class="hero" aria-labelledby="hero-title" data-scene="nebula">
   <div class="wrap">
     <div class="slides" aria-roledescription="Karussell" aria-label="ZippoWorkz in drei Bildern">
       <div class="slide is-active" role="group" aria-roledescription="Folie" aria-label="1 von 3" data-scene="flow">
@@ -207,7 +209,7 @@
   <div class="slide-grain" aria-hidden="true"></div>
 </section>
 
-<section aria-labelledby="schmerz-title">
+<section aria-labelledby="schmerz-title" data-scene="nebula">
   <div class="wrap">
     <div class="intro reveal">
       <h2 id="schmerz-title">Was sich in deinem Alltag ändert</h2>
@@ -233,7 +235,7 @@
   </div>
 </section>
 
-<section id="leistungen" aria-labelledby="leistungen-title">
+<section id="leistungen" aria-labelledby="leistungen-title" data-scene="grid">
   <div class="wrap">
     <div class="intro reveal">
       <h2 id="leistungen-title">Ein Ablauf, der im Alltag funktioniert</h2>
@@ -257,7 +259,7 @@
   </div>
 </section>
 
-<section id="autopilot" aria-labelledby="ap-title">
+<section id="autopilot" aria-labelledby="ap-title" data-scene="grid">
   <div class="wrap">
     <article class="offer reveal">
       <div class="offer-top">
@@ -314,7 +316,7 @@
   </div>
 </section>
 
-<section id="ablauf" aria-labelledby="ablauf-title">
+<section id="ablauf" aria-labelledby="ablauf-title" data-scene="grid">
   <div class="wrap">
     <div class="intro reveal"><h2 id="ablauf-title">So läuft die Zusammenarbeit</h2></div>
     <ol class="process four">
@@ -326,7 +328,7 @@
   </div>
 </section>
 
-<section id="betreuung" aria-labelledby="betreuung-title">
+<section id="betreuung" aria-labelledby="betreuung-title" data-scene="aurora">
   <div class="wrap care">
     <div class="intro reveal">
       <p class="kicker">Betrieb und Anpassungen</p>
@@ -365,7 +367,7 @@
   </div>
 </section>
 
-<section id="creator-os" aria-labelledby="creator-title">
+<section id="creator-os" aria-labelledby="creator-title" data-scene="aurora">
   <div class="wrap">
     <div class="intro reveal">
       <p class="kicker">Zweites Standbein</p>
@@ -383,7 +385,7 @@
   </div>
 </section>
 
-<section id="labs" aria-labelledby="labs-title">
+<section id="labs" aria-labelledby="labs-title" data-scene="aurora">
   <div class="wrap">
     <div class="intro reveal">
       <p class="kicker">Aus dem Haus</p>
@@ -409,7 +411,7 @@
   </div>
 </section>
 
-<section aria-labelledby="beweis-title">
+<section aria-labelledby="beweis-title" data-scene="dawn">
   <div class="wrap proof">
     <div class="intro reveal">
       <h2 id="beweis-title">Wie wir bauen</h2>
@@ -424,7 +426,7 @@
   </div>
 </section>
 
-<section aria-labelledby="tools-title">
+<section aria-labelledby="tools-title" data-scene="dawn">
   <div class="wrap two">
     <div class="toolset reveal">
       <h2 id="tools-title">Womit wir arbeiten</h2>
@@ -449,7 +451,7 @@
   </div>
 </section>
 
-<section aria-labelledby="ueber-title">
+<section aria-labelledby="ueber-title" data-scene="dawn">
   <div class="wrap about">
     <h2 id="ueber-title" class="reveal">Wer „wir“ sind</h2>
     <div class="reveal">
@@ -460,7 +462,7 @@
   </div>
 </section>
 
-<section id="fragen" aria-labelledby="fragen-title">
+<section id="fragen" aria-labelledby="fragen-title" data-scene="dawn">
   <div class="wrap">
     <div class="intro reveal"><h2 id="fragen-title">Häufige Fragen</h2></div>
     <dl class="faq">
@@ -475,7 +477,7 @@
   </div>
 </section>
 
-<section class="closing" aria-labelledby="schluss-title">
+<section class="closing" aria-labelledby="schluss-title" data-scene="dawn">
   <div class="wrap">
     <h2 id="schluss-title" class="reveal">Zeig uns den Ablauf, der dich heute nervt.</h2>
     <div class="reveal">
@@ -503,6 +505,7 @@
   </div>
 </footer>
 <script src="assets/stream.js" defer></script>
+<script src="assets/scene.js" defer></script>
 <script src="assets/hero.js" defer></script>
 </body>
 </html>
