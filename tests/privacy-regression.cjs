@@ -49,7 +49,6 @@ test('webspace allowlist still excludes internal developer and credential files'
   assert.ok(allowlist);
   assert.doesNotMatch(allowlist, /\.mcp|\.env|\.git|\.claude/);
 });
-<<<<<<< HEAD
 
 test('owner name appears only on legally required pages, and those stay out of search engines', () => {
   // Owner 22.10.2026: the name must stay where the law needs it (Impressum, Datenschutz, Widerruf, AGB),
@@ -67,7 +66,7 @@ test('owner name appears only on legally required pages, and those stay out of s
     assert.match(read(`${page}.html`), /<meta name="robots" content="noindex,follow">/, `${page}: noindex fehlt`);
     assert.ok(name.test(read(`${page}.html`)), `${page}: gesetzliche Anbieterangabe muss bleiben`);
     assert.ok(!sitemap.includes(`/${page}<`), `${page}: steht noch in der Sitemap`);
-    assert.ok(!new RegExp(`Disallow:\s*/${page}`, 'i').test(robots), `${page}: robots.txt darf noindex nicht verdecken`);
+    assert.ok(!new RegExp(`Disallow:\s*\/${page}`, 'i').test(robots), `${page}: robots.txt darf noindex nicht verdecken`);
   }
 });
 
@@ -78,5 +77,3 @@ test('whole site stays out of search engines for now (owner 23.10.2026)', () => 
   assert.ok(!/<url>/.test(read('sitemap.xml')), 'Sitemap muss leer sein');
   assert.ok(!/Disallow:\s*\/\s*$/im.test(read('robots.txt')), 'robots.txt darf nicht sperren, sonst sieht Google das noindex nicht');
 });
-=======
->>>>>>> ca7c34c8b783dcce85c392eb83f2a58447d3803a
