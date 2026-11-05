@@ -54,7 +54,7 @@ test('owner name appears only on legally required pages, and those stay out of s
   // Owner 22.10.2026: the name must stay where the law needs it (Impressum, Datenschutz, Widerruf, AGB),
   // but those pages are noindex, not in the sitemap and not blocked in robots.txt (crawlers must see noindex).
   const legal = ['impressum', 'datenschutz', 'widerruf', 'nutzungsbedingungen'];
-  const name = /Tiburczy/i;
+  const name = new RegExp(Buffer.from('VGlidXJjenk=', 'base64').toString(), 'i'); // kept out of the public repo as plain text
   const files = fs.readdirSync(root).filter(f => /\.(html|txt|xml|json|js)$/.test(f))
     .concat(fs.readdirSync(path.join(root, 'assets')).filter(f => /\.(js|json|txt)$/.test(f)).map(f => 'assets/' + f));
   for (const file of files) {
