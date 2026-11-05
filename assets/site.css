@@ -838,3 +838,18 @@ input:focus-visible { outline-offset: 0; }
 .case-offer { margin: 1rem 0 0; padding-top: .7rem; border-top: 1px solid var(--wire); color: var(--ink); font-size: .92rem; }
 @media (max-width: 640px) { .tour ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .lab-hero .lead { text-shadow: 0 0 10px #00020f, 0 0 2px #00020f; }
+
+/* Zeit-Rechner im Ratgeber */
+.rechner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 48px); padding: clamp(18px, 3vw, 32px); border: 1px solid var(--wire); border-radius: var(--r-md); background: var(--panel); }
+.rechner form { display: grid; gap: 1rem; align-content: start; }
+.rechner label { display: grid; gap: .3rem; font-weight: 600; }
+.rechner label small { color: var(--muted); font-weight: 400; font-size: .85rem; }
+.rechner input { width: 100%; }
+.rechner-out dl { display: grid; gap: .7rem; margin: 0 0 1rem; }
+.rechner-out dl div { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--wire); }
+.rechner-out dl div[hidden] { display: none; }
+.rechner-out dt { color: var(--muted); }
+.rechner-out dd { margin: 0; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 650; font-variant-numeric: tabular-nums; }
+.rechner-out p { color: var(--muted); font-size: .95rem; margin: 0 0 1.1rem; }
+.rechner-out .btn { white-space: normal; text-align: center; max-width: 100%; }
+@media (max-width: 760px) { .rechner { grid-template-columns: minmax(0, 1fr); } }
