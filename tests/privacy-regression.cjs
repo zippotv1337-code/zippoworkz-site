@@ -51,20 +51,20 @@ test('webspace allowlist still excludes internal developer and credential files'
 });
 
 test('owner name appears only on legally required pages, and those stay out of search engines', () => {
-  // Owner 22.10.2026: the name must stay where the law needs it (Impressum, Datenschutz, Widerruf, AGB),
+  // Owner 05.11.2026: the name stays only where the law clearly needs it (Impressum, Widerruf),
   // but those pages are noindex, not in the sitemap and not blocked in robots.txt (crawlers must see noindex).
-  const legal = ['impressum', 'datenschutz', 'widerruf', 'nutzungsbedingungen'];
+  const legal = ['impressum', 'datenschutz', 'widerruf', 'nutzungsbedingungen'], named = ['impressum', 'widerruf'];
   const name = new RegExp(Buffer.from('VGlidXJjenk=', 'base64').toString(), 'i'); // kept out of the public repo as plain text
   const files = fs.readdirSync(root).filter(f => /\.(html|txt|xml|json|js)$/.test(f))
     .concat(fs.readdirSync(path.join(root, 'assets')).filter(f => /\.(js|json|txt)$/.test(f)).map(f => 'assets/' + f));
   for (const file of files) {
     if (!name.test(read(file))) continue;
-    assert.ok(legal.includes(path.basename(file, '.html')), `${file}: Name nur auf Rechtsseiten`);
+    assert.ok(named.includes(path.basename(file, '.html')), `${file}: Name nur in Impressum und Widerruf`);
   }
   const sitemap = read('sitemap.xml'), robots = read('robots.txt');
   for (const page of legal) {
     assert.match(read(`${page}.html`), /<meta name="robots" content="noindex,follow">/, `${page}: noindex fehlt`);
-    assert.ok(name.test(read(`${page}.html`)), `${page}: gesetzliche Anbieterangabe muss bleiben`);
+    if (named.includes(page)) assert.ok(name.test(read(`${page}.html`)), `${page}: gesetzliche Anbieterangabe muss bleiben`);
     assert.ok(!sitemap.includes(`/${page}<`), `${page}: steht noch in der Sitemap`);
     assert.ok(!new RegExp(`Disallow:\s*\/${page}`, 'i').test(robots), `${page}: robots.txt darf noindex nicht verdecken`);
   }
