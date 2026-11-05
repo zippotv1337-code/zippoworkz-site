@@ -29,7 +29,7 @@ Statische Website für den eigenen Webspace unter `zippoworkz.com`. Ersetzt die 
 1. **Rechtstexte prüfen.** Impressum, Datenschutz, AGB und Widerruf wurden aus den bisherigen Texten neu aufgebaut (Stand 14.10.2026), nicht wörtlich kopiert. Mit den Higgsfield-Originalen abgleichen.
 2. **Hosting im Datenschutz bestätigen.** Angenommen ist IONOS SE inkl. Auftragsverarbeitungsvertrag.
 3. **Meta-App und TikTok-App:** Die hinterlegte Datenschutz-URL auf `https://zippoworkz.com/datenschutz` umstellen.
-4. **E-Mail:** Öffentlicher Kontakt ist `info@zippoworkz.com` (verbindlich laut `ZIPPOWORKZ_APPLICATION_OUTREACH_POLICY_V1.md` im Superhirn, Owner 15.10.2026; Domain-Mail-Test bestanden). `philipp@`, `sales@`, `payment@` sind interne Funktionspostfächer und stehen nicht auf der Seite.
+4. **E-Mail:** Öffentlicher Kontakt ist `info@zippoworkz.com` (verbindlich laut `ZIPPOWORKZ_APPLICATION_OUTREACH_POLICY_V1.md` im Superhirn, Owner 15.10.2026; Domain-Mail-Test bestanden). `sales@`, `payment@` sind interne Funktionspostfächer und stehen nicht auf der Seite.
 5. **Preise (Owner 17.10.2026):** öffentliche Preisanker sind Anfrage-Autopilot 1.490 €, Individuelle Automation ab 2.490 € und Betreuung ab 490 €/Monat. Kanonische Quelle ist `zippotv1337-code/superhirn:zippoworkz/sales/PRICING_CATALOG_V1.md`; alte 499-/1.900-/3.900-/1.990-Richtwerte sind keine aktuelle Preisquelle. Fiverr/Creator-Preise bleiben separat.
 
 6. **Anfrage-Autopilot:** Der Sales-Entwurf nennt Make/Zapier im Kundenkonto. Das ist auf der Seite bewusst nicht erwähnt, bis die technische Umsetzung entschieden ist.
