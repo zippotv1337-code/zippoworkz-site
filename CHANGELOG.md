@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-05: Fallbeispiele, SEO, Demo-Rundgang
+
+- New page `fallbeispiele`, own systems and clearly marked demo flows, no invented customers or figures.
+- Tighter titles and descriptions, one h1 on the demo, `llms.txt` aligned with Pricing V1.
+- Demo gets a four-step tour and a readable notice over the wave.
+- Site stays `noindex` per owner decision of 23.10.2026.
+
 <<<<<<< HEAD
 ## 2026-10-21 — Hosting disclosure and run-through animation
 

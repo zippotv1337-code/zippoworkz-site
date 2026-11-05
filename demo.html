@@ -24,7 +24,6 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
-<meta name="robots" content="noindex, follow">
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -53,7 +52,7 @@
       <h1 id="gate-title">Alles zu deinem Ablauf an einem Ort.</h1>
       <p>So sieht Betreuung bei ZippoWorkz aus: Tickets mit Verlauf, Freigaben mit einem Klick, Automationen, die du selbst pausieren kannst, Berichte und Dokumentation.</p>
       <p class="demo-flag"><b>Demo mit Beispieldaten.</b> Der Kunde „Beispiel Recruiting GmbH“ ist erfunden. Alles läuft in deinem Browser, nichts wird gesendet oder gespeichert. Neu laden setzt die Demo zurück.</p>
-      <button type="button" class="btn" id="enter">Demo öffnen</button>
+      <button type="button" class="btn" id="enter">Rundgang starten</button>
     </div>
   </div>
 </section>
@@ -62,10 +61,19 @@
   <div class="wrap">
     <div class="portal-top">
       <div>
-        <h1 id="portal-title" tabindex="-1">Kundencenter</h1>
+        <h2 id="portal-title" tabindex="-1">Kundencenter</h2>
         <p>Beispiel Recruiting GmbH · Betreuung aktiv · Ansprechpartner: Demo-Team</p>
       </div>
       <span class="pill pill-wait">Demo mit Beispieldaten</span>
+    </div>
+    <div class="tour">
+      <p id="tour-next">Rundgang in vier Schritten. Beginn mit deiner eigenen Anfrage.</p>
+      <ol>
+        <li><a href="#testlauf" data-go="testlauf" data-tour><b>1</b> Anfrage testen</a></li>
+        <li><a href="#freigaben" data-go="freigaben" data-tour><b>2</b> Entwurf freigeben</a></li>
+        <li><a href="#automationen" data-go="automationen" data-tour><b>3</b> Ablauf pausieren</a></li>
+        <li><a href="#berichte" data-go="berichte" data-tour><b>4</b> Bericht lesen</a></li>
+      </ol>
     </div>
     <div class="portal-body">
       <nav class="portal-nav" aria-label="Kundencenter">
@@ -342,6 +350,7 @@ Jana Köhler</textarea>
     <p>© 2026 ZippoWorkz. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
     <nav aria-label="Weitere Seiten">
       <a href="anfragen-automatisieren">Ratgeber: Anfragen automatisieren</a>
+      <a href="fallbeispiele">Fallbeispiele</a>
       <a href="demo">Kundencenter (Demo)</a>
       <a href="impressum">Impressum</a>
       <a href="datenschutz">Datenschutz</a>

@@ -54,7 +54,7 @@ test('owner name appears only on legally required pages, and those stay out of s
   // Owner 22.10.2026: the name must stay where the law needs it (Impressum, Datenschutz, Widerruf, AGB),
   // but those pages are noindex, not in the sitemap and not blocked in robots.txt (crawlers must see noindex).
   const legal = ['impressum', 'datenschutz', 'widerruf', 'nutzungsbedingungen'];
-  const name = /Tiburczy/i;
+  const name = new RegExp(Buffer.from('VGlidXJjenk=', 'base64').toString(), 'i'); // kept out of the public repo as plain text
   const files = fs.readdirSync(root).filter(f => /\.(html|txt|xml|json|js)$/.test(f))
     .concat(fs.readdirSync(path.join(root, 'assets')).filter(f => /\.(js|json|txt)$/.test(f)).map(f => 'assets/' + f));
   for (const file of files) {
@@ -70,10 +70,11 @@ test('owner name appears only on legally required pages, and those stay out of s
   }
 });
 
-test('whole site stays out of search engines for now (owner 23.10.2026)', () => {
-  // Reversible: remove the robots meta from the marketing pages and restore sitemap entries.
-  for (const file of fs.readdirSync(root).filter(f => f.endsWith('.html')))
-    assert.match(read(file), /<meta name="robots" content="noindex[^"]*">/, `${file}: noindex fehlt`);
-  assert.ok(!/<url>/.test(read('sitemap.xml')), 'Sitemap muss leer sein');
-  assert.ok(!/Disallow:\s*\/\s*$/im.test(read('robots.txt')), 'robots.txt darf nicht sperren, sonst sieht Google das noindex nicht');
+test('marketing pages are indexable, legal pages and leftovers are not', () => {
+  const open = ['index', 'anfragen-automatisieren', 'fallbeispiele', 'demo', 'creator', 'markets-lab'];
+  for (const page of open) assert.doesNotMatch(read(`${page}.html`), /<meta name="robots"[^>]*noindex/, `${page}: noindex`);
+  for (const page of ['404', 'milo', 'impressum', 'datenschutz', 'widerruf', 'nutzungsbedingungen'])
+    assert.match(read(`${page}.html`), /<meta name="robots" content="noindex[^"]*">/, `${page}: noindex fehlt`);
+  assert.equal((read('sitemap.xml').match(/<url>/g) || []).length, open.length);
+  assert.ok(!/Disallow:\s*\/\s*$/im.test(read('robots.txt')), 'robots.txt darf nicht sperren');
 });

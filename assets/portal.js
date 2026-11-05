@@ -71,6 +71,17 @@
     var h = document.querySelector("#view-" + name + " h2");
     if (h && document.activeElement && document.activeElement.closest && document.activeElement.closest(".portal-nav")) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
     render(name);
+    tourStep(name);
+  }
+  // Guided path through the demo; a visited step stays ticked until the page reloads.
+  var tourLinks = Array.prototype.slice.call(app.querySelectorAll("[data-tour]"));
+  var tourTexts = { testlauf: "Als Nächstes: Entwurf freigeben. Du entscheidest, was rausgeht.", freigaben: "Als Nächstes: Einen Ablauf pausieren. Eingänge gehen nicht verloren.", automationen: "Als Nächstes: Den Wochenbericht lesen.", berichte: "Rundgang fertig. So sieht Betreuung bei uns aus." };
+  function tourStep(name) {
+    var step = tourLinks.filter(function (a) { return a.getAttribute("data-go") === name; })[0];
+    if (!step) return;
+    step.classList.add("done");
+    var open = tourLinks.filter(function (a) { return !a.classList.contains("done"); });
+    document.getElementById("tour-next").textContent = open.length ? tourTexts[name] : tourTexts.berichte;
   }
   links.forEach(function (a) {
     a.addEventListener("click", function (e) {

@@ -456,8 +456,8 @@ section + section { border-top: 1px solid color-mix(in oklab, var(--wire) 60%, t
 .portal-shell { padding: clamp(28px, 4vw, 48px) 0 clamp(56px, 8vw, 96px); }
 .portal-shell[hidden], .portal-gate[hidden] { display: none; }
 .portal-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: .8rem 2rem; padding-bottom: 1.2rem; margin-bottom: 1.4rem; border-bottom: 1px solid var(--wire); }
-.portal-top h1 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); letter-spacing: -.03em; }
-.portal-top h1:focus { outline: none; }
+.portal-top h1, .portal-top h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); letter-spacing: -.03em; }
+.portal-top h1:focus, .portal-top h2:focus { outline: none; }
 .portal-top p { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; }
 .portal-body { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(20px, 3vw, 40px); align-items: start; }
 .portal-nav { position: sticky; top: 84px; display: grid; gap: 2px; }
@@ -816,3 +816,25 @@ input:focus-visible { outline-offset: 0; }
   .is-slider .slide, .is-slider .slide.is-leaving { transition: none; filter: none; transform: none; }
   .slide-grain { display: none; }
 }
+
+/* Fallbeispiele und Demo-Rundgang, 05.11.2026 */
+.demo-flag { background: color-mix(in oklab, var(--bg, #00020f) 86%, transparent); }
+.tour { margin-bottom: 1.4rem; }
+.tour p { margin: 0 0 .6rem; color: var(--muted); font-size: .95rem; }
+.tour ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem; }
+.tour a { display: flex; align-items: center; gap: .5rem; height: 100%; padding: .6rem .75rem; border: 1px solid var(--wire); border-radius: var(--r-sm); color: var(--ink); font-size: .92rem; text-decoration: none; }
+.tour a b { display: grid; place-items: center; flex: none; width: 1.5rem; height: 1.5rem; border-radius: 50%; border: 1px solid var(--wire); font-size: .8rem; }
+.tour a[aria-current="page"] { border-color: var(--signal); }
+.tour a.done b { background: var(--signal); border-color: var(--signal); color: #00020f; }
+.case-note { max-width: 48rem; color: var(--muted); }
+.case-tag { display: inline-block; margin: 0 0 .7rem; padding: .15rem .55rem; border-radius: 99px; border: 1px solid var(--wire); color: var(--muted); font-size: .8rem; }
+.case-tag.real { border-color: var(--signal); color: var(--signal); }
+.case-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 1rem; }
+.case { display: flex; flex-direction: column; padding: clamp(18px, 2.4vw, 26px); border: 1px solid var(--wire); border-radius: var(--r-sm); }
+.case h3 { margin: 0 0 .7rem; font-size: 1.2rem; }
+.case dl { margin: 0; flex: 1; }
+.case dt { margin-top: .7rem; font-size: .8rem; font-weight: 650; color: var(--ink); }
+.case dd { margin: .1rem 0 0; color: var(--muted); font-size: .98rem; }
+.case-offer { margin: 1rem 0 0; padding-top: .7rem; border-top: 1px solid var(--wire); color: var(--ink); font-size: .92rem; }
+@media (max-width: 640px) { .tour ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.lab-hero .lead { text-shadow: 0 0 10px #00020f, 0 0 2px #00020f; }
