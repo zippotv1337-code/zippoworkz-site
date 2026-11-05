@@ -77,6 +77,31 @@
   </div>
 </section>
 
+<section aria-labelledby="a-rechner">
+  <div class="wrap">
+    <div class="intro reveal">
+      <h2 id="a-rechner">Wie viel Zeit gehen bei dir dafür drauf?</h2>
+      <p>Trag deine eigenen Werte ein. Das Ergebnis zeigt nur, wie viel Zeit heute in diese Arbeit fließt.</p>
+    </div>
+    <div class="rechner reveal">
+      <form id="rechner" autocomplete="off">
+        <label>Anfragen pro Woche<input name="requests" type="number" min="0" max="10000" step="1" value="30" inputmode="numeric"></label>
+        <label>Minuten pro Anfrage<small>Lesen, einordnen, abtippen, erste Antwort</small><input name="minutes" type="number" min="0" max="240" step="1" value="6" inputmode="numeric"></label>
+        <label>Kosten pro Stunde in €, optional<input name="rate" type="number" min="0" max="1000" step="1" inputmode="numeric"></label>
+      </form>
+      <div class="rechner-out" aria-live="polite">
+        <dl>
+          <div><dt>Im Monat</dt><dd id="r-month">13 Std.</dd></div>
+          <div><dt>Im Jahr</dt><dd id="r-year">156 Std.</dd></div>
+          <div id="r-cost-row" hidden><dt>Kosten im Monat</dt><dd id="r-cost"></dd></div>
+        </dl>
+        <p>Das sind deine eigenen Annahmen, keine Prognose. Wie viel davon ein Ablauf übernehmen kann, klären wir im Ablauf-Check.</p>
+        <a class="btn" id="r-cta" href="mailto:info@zippoworkz.com?subject=Ablauf-Check">Ablauf-Check mit diesen Zahlen anfragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section aria-labelledby="a-ki">
   <div class="wrap two">
     <div class="intro reveal">
@@ -157,6 +182,7 @@
     </nav>
   </div>
 </footer>
+<script src="assets/rechner.js" defer></script>
 <script src="assets/stream.js" defer></script>
 <script src="assets/labs.js" defer></script>
 </body>

@@ -22,7 +22,7 @@ jobs:
       - name: Run pricing regression
         run: node --test tests/pricing-regression.cjs
       - name: Run privacy and public-surface regression
-        run: node --test tests/privacy-regression.cjs
+        run: node --test tests/privacy-regression.cjs tests/rechner-regression.cjs
       - name: Install browser test driver
         run: npm install --no-save playwright-core
       - name: Run page regression
