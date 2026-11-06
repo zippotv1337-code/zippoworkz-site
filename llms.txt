@@ -6,12 +6,11 @@
 - Ablauf-Check: kostenlos. Ehrliche Einschätzung, ob sich ein Ablauf automatisieren lässt.
 - Anfrage-Autopilot: 1.490 € einmalig (Festpreis), Umsetzung in der Regel in sieben Arbeitstagen. Ein Eingangskanal (z. B. Postfach oder Kontaktformular), KI-Einordnung in bis zu fünf Kategorien plus Dringlichkeit, Eintrag in ein Zielsystem (z. B. HubSpot oder Google Sheet), Antwortentwurf zur Freigabe ohne automatischen Versand, eine Benachrichtigung, Fehlerpfad. Dazu Testprotokoll mit zehn Beispielanfragen, Dokumentation, 30 Minuten Video-Übergabe, 14 Tage Fehlerbehebung.
 - Individuelle Automation: Festpreis nach dem Check, ab 2.490 €.
-- Betreuung, monatlich kündbar: Betrieb 490 €/Monat, Betrieb und Ausbau 990 €/Monat (bis 4 Std. Anpassungen), Partner ab 1.990 €/Monat. Zusätzliche Arbeit 120 €/Std. Kundencenter mit Tickets, Freigaben, Automationen, Berichten und Dokumentation.
+- Betreuung, monatlich kündbar: ab 490 €/Monat, Umfang nach Absprache. Zusätzliche Arbeit 120 €/Std. Kundencenter mit Tickets, Freigaben, Automationen, Berichten und Dokumentation.
 
 ## Creator OS
 - Instagram-Publishing über die offizielle Meta-API mit Beleg pro Veröffentlichung und KI-Kennzeichnung.
 - DM-Assistent mit Übergabe unklarer Fälle an einen Menschen.
-- AI UGC Starter: 99 €. Social Media Content Pack: 249 €.
 
 ## Hinweise
 - Kleinunternehmer nach § 19 UStG, keine Umsatzsteuer.
