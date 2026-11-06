@@ -6,6 +6,7 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const guide = fs.readFileSync(path.join(root, 'anfragen-automatisieren.html'), 'utf8');
+const llms = fs.readFileSync(path.join(root, 'llms.txt'), 'utf8');
 
 test('homepage exposes only the approved public pricing anchors', () => {
   assert.match(index, /Anfrage-Autopilot[\s\S]*?1\.490\s*€/);
@@ -37,4 +38,11 @@ test('existing animation hooks remain present', () => {
   assert.match(index, /<canvas class="stream" id="stream"/);
   assert.match(index, /assets\/stream\.js/);
   assert.match(index, /class="slides"/);
+});
+
+test('llms.txt uses only the approved public pricing anchors', () => {
+  assert.match(llms, /Anfrage-Autopilot: 1\.490\s*€/);
+  assert.match(llms, /ab\s+2\.490\s*€/);
+  assert.match(llms, /Betreuung[^\n]*ab\s+490\s*€\/Monat/);
+  for (const stale of [/3\.900\s*€/, /1\.990\s*€/, /\b990\s*€\/Monat/, /\b99\s*€/, /\b249\s*€/]) assert.doesNotMatch(llms, stale);
 });
