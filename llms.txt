@@ -5,7 +5,7 @@
 ## KI-Workflows
 - Ablauf-Check: kostenlos. Ehrliche Einschätzung, ob sich ein Ablauf automatisieren lässt.
 - Anfrage-Autopilot: 1.490 € einmalig (Festpreis), Umsetzung in der Regel in sieben Arbeitstagen. Ein Eingangskanal (z. B. Postfach oder Kontaktformular), KI-Einordnung in bis zu fünf Kategorien plus Dringlichkeit, Eintrag in ein Zielsystem (z. B. HubSpot oder Google Sheet), Antwortentwurf zur Freigabe ohne automatischen Versand, eine Benachrichtigung, Fehlerpfad. Dazu Testprotokoll mit zehn Beispielanfragen, Dokumentation, 30 Minuten Video-Übergabe, 14 Tage Fehlerbehebung.
-- Individuelle Workflows: Festpreis nach dem Check, in der Regel ab 3.900 €.
+- Individuelle Automation: Festpreis nach dem Check, ab 2.490 €.
 - Betreuung, monatlich kündbar: Betrieb 490 €/Monat, Betrieb und Ausbau 990 €/Monat (bis 4 Std. Anpassungen), Partner ab 1.990 €/Monat. Zusätzliche Arbeit 120 €/Std. Kundencenter mit Tickets, Freigaben, Automationen, Berichten und Dokumentation.
 
 ## Creator OS
@@ -15,7 +15,7 @@
 
 ## Hinweise
 - Kleinunternehmer nach § 19 UStG, keine Umsatzsteuer.
-- Kundenprojekte werden erst mit Zustimmung der Kunden gezeigt.
+- Kundenprojekte werden erst mit Zustimmung der Kunden gezeigt. Fallbeispiele: https://zippoworkz.com/fallbeispiele (eigene Systeme und Demo-Abläufe mit Beispieldaten).
 
 ## Kontakt
 - E-Mail: info@zippoworkz.com
