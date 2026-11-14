@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<!-- OWNER-GATE: Sobald der Formular-Dienst feststeht, dessen Adresse in connect-src und form-action ergänzen (z. B. https://api.web3forms.com). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kontakt | ZippoWorkz</title>
+<meta name="description" content="Schreib uns, was dich Zeit kostet oder was an deiner App nicht läuft. Du bekommst eine ehrliche Einschätzung.">
+<link rel="canonical" href="https://zippoworkz.com/kontakt">
+<meta name="theme-color" content="#00020f">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<canvas class="stream" id="stream" aria-hidden="true"></canvas>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="ZippoWorkz Startseite"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f68ff"/><stop offset="1" stop-color="#29a9ff"/></linearGradient></defs><path d="M6 7h20L6 25h20" fill="none" stroke="url(#zg)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg>ZippoWorkz</a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="./#leistungen">Leistungen</a>
+      <a href="./#autopilot">Anfrage-Autopilot</a>
+      <a href="./#betreuung">Betreuung</a>
+      <a href="./#apps">Apps &amp; lokale KI</a>
+      <a href="./#fragen">Fragen</a>
+    </nav>
+  </div>
+</header>
+<main id="inhalt">
+  <section aria-labelledby="kontakt-title">
+    <div class="wrap contact-wrap">
+      <div class="intro">
+        <p class="kicker">Kontakt</p>
+        <h1 id="kontakt-title">Erzähl uns kurz, worum es geht.</h1>
+        <p>Ein paar Sätze reichen. Du bekommst innerhalb von zwei Werktagen eine ehrliche Einschätzung, auch wenn sich etwas für dich nicht lohnt.</p>
+      </div>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="field two-col">
+          <label>Name *<input name="name" autocomplete="name" maxlength="80" required></label>
+          <label>E-Mail *<input name="email" type="email" autocomplete="email" maxlength="120" required></label>
+        </div>
+        <label class="field">Firma <span class="opt">(optional)</span><input name="company" autocomplete="organization" maxlength="120"></label>
+
+        <fieldset class="field">
+          <legend>Worum geht es? *</legend>
+          <div class="choices">
+            <label><input type="radio" name="topic" value="ablauf" required> Anfragen oder Abläufe automatisieren</label>
+            <label><input type="radio" name="topic" value="app"> KI-gebaute App reparieren oder absichern</label>
+            <label><input type="radio" name="topic" value="lokal"> Lokale KI auf eigenem Rechner</label>
+            <label><input type="radio" name="topic" value="anderes"> Etwas anderes</label>
+          </div>
+        </fieldset>
+
+        <label class="field"><span id="q-what">Was passiert heute von Hand, oder was funktioniert nicht? *</span>
+          <textarea name="what" maxlength="2000" required aria-describedby="q-what-hint"></textarea>
+          <span class="hint" id="q-what-hint">Bitte keine Passwörter oder Zugangsdaten eintragen.</span></label>
+        <label class="field">Welche Tools oder Plattformen sind beteiligt?
+          <input name="tools" maxlength="200" placeholder="z. B. Gmail, HubSpot, Lovable, Supabase, Windows-PC"></label>
+        <label class="field">Wie dringend ist es?
+          <select name="urgency"><option value="">Bitte wählen</option><option>Diese Woche</option><option>In den nächsten 4 Wochen</option><option>Erst mal informieren</option></select></label>
+
+        <!-- Spam trap: people never see or fill this field. -->
+        <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+
+        <label class="consent"><input type="checkbox" name="consent" required><span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden. Details in der <a class="link" href="datenschutz">Datenschutzerklärung</a>. *</span></label>
+
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <button class="btn" type="submit">Anfrage senden</button>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p>© 2026 ZippoWorkz. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
+    <nav aria-label="Weitere Seiten">
+      <a href="anfragen-automatisieren">Ratgeber: Anfragen automatisieren</a>
+      <a href="fallbeispiele">Fallbeispiele</a>
+      <a href="./#apps">Apps &amp; lokale KI</a>
+      <a href="impressum">Impressum</a>
+      <a href="datenschutz">Datenschutz</a>
+      <a href="nutzungsbedingungen">AGB</a>
+      <a href="widerruf">Widerruf</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/stream.js" defer></script>
+<script src="assets/contact.js" defer></script>
+</body>
+</html>

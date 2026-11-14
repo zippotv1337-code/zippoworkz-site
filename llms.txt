@@ -1,6 +1,6 @@
 # ZippoWorkz
 
-> ZiPPoworkz entwickelt betriebliche KI-Workflows für Agenturen, Recruiting und Dienstleister. Das Team verbindet menschliche Projektverantwortung mit KI-gestützter Umsetzung, Tests und Monitoring. Änderungen werden vor dem Livegang geprüft. Creator OS unterstützt Social-Media-Betrieb über die offizielle Meta-API.
+> ZiPPoworkz entwickelt betriebliche KI-Workflows für Agenturen, Recruiting und Dienstleister. Das Team verbindet menschliche Projektverantwortung mit KI-gestützter Umsetzung, Tests und Monitoring. Änderungen werden vor dem Livegang geprüft. Dazu reparieren und sichern wir KI-gebaute Apps und richten lokale KI auf eigenen Rechnern ein.
 
 ## KI-Workflows
 - Ablauf-Check: kostenlos. Ehrliche Einschätzung, ob sich ein Ablauf automatisieren lässt.
@@ -8,10 +8,9 @@
 - Individuelle Automation: Festpreis nach dem Check, ab 2.490 €.
 - Betreuung, monatlich kündbar: Betrieb 490 €/Monat, Betrieb und Ausbau 990 €/Monat (bis 4 Std. Anpassungen), Partner ab 1.990 €/Monat. Zusätzliche Arbeit 120 €/Std. Kundencenter mit Tickets, Freigaben, Automationen, Berichten und Dokumentation.
 
-## Creator OS
-- Instagram-Publishing über die offizielle Meta-API mit Beleg pro Veröffentlichung und KI-Kennzeichnung.
-- DM-Assistent mit Übergabe unklarer Fälle an einen Menschen.
-- AI UGC Starter: 99 €. Social Media Content Pack: 249 €.
+## Apps und lokale KI
+- KI-gebaute Apps (Lovable, Bolt, Cursor) reparieren und absichern: Fehler im Live-Betrieb, Supabase-Zugriffsregeln (RLS), Schlüssel im Browser, Deployment. Demo: https://zippoworkz.com/app-demo/
+- Lokale KI: Ollama-Assistent auf dem eigenen Rechner, nach Hardware-Check.
 
 ## Hinweise
 - Kleinunternehmer nach § 19 UStG, keine Umsatzsteuer.
@@ -21,7 +20,3 @@
 - E-Mail: info@zippoworkz.com
 - Website: https://zippoworkz.com/
 - Impressum: https://zippoworkz.com/impressum
-
-## Labs (Nebenprojekte)
-- Creator Studio (/creator): System für KI-Influencer, Demo mit Beispieldaten. Veröffentlichung nur mit Freigabe über die offizielle Meta-API.
-- Markets Lab (/markets-lab): Trading-Bot im Paper-Modus. Kein Echtgeld, keine Anlageberatung, keine Renditeangaben.
