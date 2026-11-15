@@ -403,6 +403,43 @@
   </div>
 </section>
 
+<section id="tools" aria-labelledby="tools2-title">
+  <div class="wrap">
+    <div class="intro reveal">
+      <p class="kicker">In 30 Sekunden</p>
+      <h2 id="tools2-title">Finde heraus, was du brauchst</h2>
+      <p>Zwei kleine Werkzeuge. Alles läuft in deinem Browser, nichts wird gesendet oder gespeichert.</p>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-card reveal">
+        <h3>Was nervt dich gerade am meisten?</h3>
+        <div class="finder" id="finder" role="group" aria-label="Was nervt dich gerade am meisten?">
+          <button type="button" data-offer="ablauf" aria-pressed="false">Anfragen bleiben liegen</button>
+          <button type="button" data-offer="app" aria-pressed="false">Meine App läuft live nicht</button>
+          <button type="button" data-offer="sicher" aria-pressed="false">Ich traue unserer KI nicht ganz</button>
+          <button type="button" data-offer="lokal" aria-pressed="false">Daten sollen nicht in die Cloud</button>
+          <button type="button" data-offer="geo" aria-pressed="false">Kunden finden uns nicht</button>
+        </div>
+        <div class="finder-out" id="finder-out" aria-live="polite" hidden></div>
+      </div>
+      <div class="tool-card reveal">
+        <h3>KI-Sicherheits-Selbstcheck</h3>
+        <p class="tool-sub">Hak an, was bei euch zutrifft.</p>
+        <fieldset class="selfcheck" id="selfcheck">
+          <legend class="sr-only">Was trifft auf euer KI-Setup zu?</legend>
+          <label><input type="checkbox"> Unsere KI kann Mails oder Nachrichten ohne Freigabe verschicken.</label>
+          <label><input type="checkbox"> API-Schlüssel stehen im Code, in Workflows oder in Chats.</label>
+          <label><input type="checkbox"> Die KI liest Mails, Webseiten oder Formulare und kann danach selbst Aktionen ausführen.</label>
+          <label><input type="checkbox"> Niemand hat geprüft, welche Rechte unser Agent oder MCP-Server hat.</label>
+          <label><input type="checkbox"> Unser Chatbot sagt nicht, dass er eine KI ist.</label>
+          <label><input type="checkbox"> Es gibt kein Protokoll, was die KI wann getan hat.</label>
+        </fieldset>
+        <div class="selfcheck-out" id="selfcheck-out" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section aria-labelledby="beweis-title">
   <div class="wrap proof">
     <div class="intro reveal">
@@ -504,5 +541,6 @@
 </footer>
 <script src="assets/stream.js" defer></script>
 <script src="assets/hero.js" defer></script>
+<script src="assets/interactive.js" defer></script>
 </body>
 </html>
