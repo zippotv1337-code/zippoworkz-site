@@ -2,8 +2,8 @@
    OWNER-GATE: endpoint stays empty until the owner picks a service; the CSP in kontakt.html must allow it too. */
 (function () {
   "use strict";
-  var ENDPOINT = "";   // e.g. "https://api.web3forms.com/submit"
-  var ACCESS_KEY = ""; // public form key from the service, never a password or API secret
+  var ENDPOINT = "https://api.web3forms.com/submit";
+  var ACCESS_KEY = "0b486529-d69b-458c-93a6-02753bf86cae"; // public Web3Forms form key (designed to sit in the page), not a secret
 
   var form = document.getElementById("contact-form");
   if (!form) return;
@@ -55,7 +55,10 @@
     var btn = form.querySelector('button[type="submit"]');
     btn.disabled = true;
     say("Wird gesendet …", true);
-    fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(body) })
+    // Multipart form data is a "simple" CORS request; a JSON body triggers a preflight that Web3Forms rejects.
+    var fd = new FormData();
+    Object.keys(body).forEach(function (k) { fd.append(k, body[k]); });
+    fetch(ENDPOINT, { method: "POST", body: fd })
       .then(function (r) { if (!r.ok) throw new Error(String(r.status)); form.reset(); relabel(); say("Danke! Deine Anfrage ist angekommen. Wir melden uns innerhalb von zwei Werktagen.", true); })
       .catch(function () { say("Das hat nicht geklappt. Bitte schreib uns direkt an info@zippoworkz.com.", false); })
       .then(function () { btn.disabled = false; });
