@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<title>KI-Sichtbarkeit · Demo · ZippoWorkz</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../app-demo/style.css">
+<link rel="stylesheet" href="geo.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f68ff"/><stop offset="1" stop-color="#29a9ff"/></linearGradient></defs><path d="M8.5 9h15L8.5 23h15" fill="none" stroke="url(#zg)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>KI-Sichtbarkeit <small>Demo</small></span>
+  </div>
+  <a class="link" href="../#apps">Zurück zu ZippoWorkz</a>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Empfiehlt ChatGPT deine Firma?</h1>
+    <p>Immer mehr Kunden fragen eine KI statt Google. Wir stellen ChatGPT, Perplexity, Claude und Gemini typische Kundenfragen und prüfen, ob du genannt wirst. Danach beheben wir, was fehlt. Unten siehst du einen Beispielbericht mit einer erfundenen Firma.</p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Beispielbericht: Malerbetrieb Beispiel, Kassel</h2>
+      <span class="pill-score" id="score"></span>
+    </div>
+    <p class="muted">Erfundene Firma, Beispieldaten. Jede Zeile ist eine Frage, wie sie ein Kunde stellen würde.</p>
+    <div class="table-wrap"><table id="report"><thead><tr><th>Kundenfrage</th><th>ChatGPT</th><th>Perplexity</th><th>Claude</th><th>Gemini</th></tr></thead><tbody></tbody></table></div>
+    <h3>Was fehlt und was wir beheben</h3>
+    <ul class="fixes">
+      <li><b>Keine <code>llms.txt</code>.</b> KI-Assistenten finden keine kurze, verlässliche Beschreibung der Firma.</li>
+      <li><b>Keine strukturierten Daten.</b> Leistungen, Ort und Öffnungszeiten stehen nur als Fließtext auf der Seite.</li>
+      <li><b>Google-Unternehmensprofil unvollständig.</b> Keine Leistungsliste, kaum Fotos, keine Antworten auf Fragen.</li>
+      <li><b>Keine FAQ-Seite.</b> Typische Fragen wie „Was kostet ein Zimmer streichen?“ beantwortet die Website nirgends.</li>
+    </ul>
+    <p class="muted">Nach den Fixes messen wir nach 30 Tagen erneut. Eine Nennung können wir nicht garantieren, keine seriöse Agentur kann das.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Probier es selbst: deine <code>llms.txt</code> in 1 Minute</h2>
+    <p class="muted">Eine <code>llms.txt</code> liegt im Hauptordner deiner Website und erklärt KI-Assistenten in Klartext, wer du bist. Alles bleibt in deinem Browser, nichts wird gesendet.</p>
+    <form id="gen" class="gen">
+      <label>Firmenname<input id="g-name" maxlength="80" placeholder="Malerbetrieb Beispiel"></label>
+      <label>Ort oder Region<input id="g-place" maxlength="80" placeholder="Kassel und Umgebung"></label>
+      <label class="wide">Was macht ihr, in einem Satz?<input id="g-what" maxlength="200" placeholder="Wir streichen Wohnungen und Häuser, innen und außen."></label>
+      <label class="wide">Leistungen, eine pro Zeile<textarea id="g-services" rows="4" maxlength="800" placeholder="Innenanstrich&#10;Fassade&#10;Tapezieren"></textarea></label>
+      <label>Website<input id="g-url" maxlength="120" placeholder="https://www.beispiel.de"></label>
+      <label>Kontaktseite<input id="g-contact" maxlength="120" placeholder="https://www.beispiel.de/kontakt"></label>
+    </form>
+    <div class="out-head"><h3>Deine llms.txt</h3><button type="button" id="copy" class="copy">Kopieren</button></div>
+    <pre class="query" id="out"></pre>
+    <p class="muted" id="copied" role="status" aria-live="polite"></p>
+  </section>
+
+  <p class="foot">Demo mit erfundener Firma und Beispieldaten. Die Tabelle ist kein echtes Messergebnis. <a class="link" href="../kontakt?thema=geo">KI-Sichtbarkeit für deine Firma anfragen</a></p>
+</main>
+<script src="geo.js"></script>
+</body>
+</html>

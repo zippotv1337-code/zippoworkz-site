@@ -8,9 +8,9 @@
   // ---------- sample data ----------
   var state = {
     tickets: [
-      { id: "ZW-1047", title: "Neue Kategorie „Initiativbewerbung“ ergänzen", kind: "Änderungswunsch", prio: "Normal", status: "In Bearbeitung", updated: "heute, 09:12",
+      { id: "ZW-1047", title: "Neue Kategorie „Rückrufwunsch“ ergänzen", kind: "Änderungswunsch", prio: "Normal", status: "In Bearbeitung", updated: "heute, 09:12",
         thread: [
-          { from: "Du", text: "Wir bekommen immer mehr Initiativbewerbungen per Mail. Könnt ihr dafür eine eigene Kategorie anlegen, die direkt an Sara geht?" },
+          { from: "Du", text: "Wir bekommen immer mehr Rückrufwünsche per Mail. Könnt ihr dafür eine eigene Kategorie anlegen, die direkt an Sara geht?" },
           { from: "ZippoWorkz", text: "Machen wir. Wir legen die Kategorie an, trainieren die Einordnung mit euren letzten 15 Beispielen und schicken dir einen Testlauf zur Freigabe." }
         ] },
       { id: "ZW-1044", title: "Antwortentwurf nennt alten Ansprechpartner", kind: "Fehler", prio: "Hoch", status: "Erledigt", updated: "gestern",
@@ -217,7 +217,7 @@
   // ---------- Szenarien + Live-Verlauf ----------
   // Beispielwerte im Zeitraffer (1 Demo-Sekunde = 5 Minuten); keine verbindliche Zusage.
   var scenarios = [
-    { id: "bewerbung", name: "Bewerbungseingang", desc: "Bewerbungen aus Mail und Formular landen sortiert im CRM, Antwortentwurf wartet auf Freigabe.", sample: "Bewerbungen kommen per Mail und Formular, wir tragen alles von Hand ins CRM ein." },
+    { id: "rueckruf", name: "Rückrufwünsche", desc: "Rückrufwünsche aus Mail und Formular landen sortiert im CRM, ein Terminvorschlag wartet auf Freigabe.", sample: "Kunden bitten per Mail und Formular um Rückruf, wir tragen alles von Hand ins CRM ein." },
     { id: "anfragen", name: "Kundenanfragen beantworten", desc: "Anfragen werden eingeordnet, dringende gehen sofort ans Team, der Rest bekommt einen Entwurf.", sample: "Anfragen über Instagram und Mail gehen unter, niemand sieht rechtzeitig, was dringend ist." },
     { id: "bericht", name: "Wochenbericht automatisch", desc: "Zahlen aus CRM und Postfach werden montags zu einem Bericht für Team und Chef.", sample: "Jeden Montag bauen wir den Wochenbericht aus drei Tabellen zusammen." }
   ];

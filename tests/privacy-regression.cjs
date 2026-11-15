@@ -18,7 +18,8 @@ test('marketing structured data describes the brand, not a private person or str
   assert.ok(objects.every(item => !Object.hasOwn(item, 'founder')), 'founder data must stay off marketing SEO');
   assert.ok(objects.every(item => item['@type'] !== 'Person' && item['@type'] !== 'PostalAddress'));
   assert.ok(objects.every(item => !Object.hasOwn(item, 'streetAddress') && !Object.hasOwn(item, 'postalCode')));
-  assert.ok(!/linkedin\.com\/in\//i.test(index), 'personal profile absent from marketing');
+  // Owner 15.11.2026: the LinkedIn profile may be linked (footer and about), but not as structured data.
+  assert.ok(objects.every(item => !JSON.stringify(item).includes('linkedin.com/in/')), 'personal profile stays out of structured data');
 });
 
 test('about, FAQ, demo and AI summary use brand/team contacts', () => {
@@ -71,7 +72,7 @@ test('owner name appears only on legally required pages, and those stay out of s
 });
 
 test('marketing pages are indexable, legal pages and leftovers are not', () => {
-  const open = ['index', 'anfragen-automatisieren', 'fallbeispiele', 'demo', 'creator', 'markets-lab'];
+  const open = ['index', 'anfragen-automatisieren', 'fallbeispiele', 'demo', 'kontakt'];
   for (const page of open) assert.doesNotMatch(read(`${page}.html`), /<meta name="robots"[^>]*noindex/, `${page}: noindex`);
   for (const page of ['404', 'milo', 'impressum', 'datenschutz', 'widerruf', 'nutzungsbedingungen'])
     assert.match(read(`${page}.html`), /<meta name="robots" content="noindex[^"]*">/, `${page}: noindex fehlt`);

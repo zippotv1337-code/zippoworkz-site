@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com; base-uri 'self'; form-action 'self'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kundencenter (Demo) | ZippoWorkz</title>
@@ -35,10 +35,10 @@
       <a href="./#leistungen">Leistungen</a>
       <a href="./#autopilot">Anfrage-Autopilot</a>
       <a href="./#betreuung">Betreuung</a>
-      <a href="./#creator-os">Creator OS</a>
+      <a href="./#apps">Apps &amp; lokale KI</a>
       <a href="./#fragen">Fragen</a>
     </nav>
-    <a class="btn" href="mailto:info@zippoworkz.com?subject=Ablauf-Check&amp;body=Hallo%20ZippoWorkz%2C%0A%0Adieser%20Ablauf%20kostet%20uns%20gerade%20Zeit%3A%0A%0A-%20Was%20passiert%20heute%20von%20Hand%3F%0A-%20Welche%20Tools%20sind%20beteiligt%3F%0A-%20Wie%20oft%20pro%20Woche%3F%0A-%20Wer%20macht%20es%3F%0A%0AViele%20Gr%C3%BC%C3%9Fe">Ablauf-Check anfragen</a>
+    <a class="btn" href="kontakt">Ablauf-Check anfragen</a>
   </div>
 </header>
 
@@ -51,7 +51,7 @@
       <p class="kicker">Kundencenter</p>
       <h1 id="gate-title">Alles zu deinem Ablauf an einem Ort.</h1>
       <p>So sieht Betreuung bei ZippoWorkz aus: Tickets mit Verlauf, Freigaben mit einem Klick, Automationen, die du selbst pausieren kannst, Berichte und Dokumentation.</p>
-      <p class="demo-flag"><b>Demo mit Beispieldaten.</b> Der Kunde „Beispiel Recruiting GmbH“ ist erfunden. Alles läuft in deinem Browser, nichts wird gesendet oder gespeichert. Neu laden setzt die Demo zurück.</p>
+      <p class="demo-flag"><b>Demo mit Beispieldaten.</b> Der Kunde „Beispiel Agentur GmbH“ ist erfunden. Alles läuft in deinem Browser, nichts wird gesendet oder gespeichert. Neu laden setzt die Demo zurück.</p>
       <button type="button" class="btn" id="enter">Rundgang starten</button>
     </div>
   </div>
@@ -62,7 +62,7 @@
     <div class="portal-top">
       <div>
         <h2 id="portal-title" tabindex="-1">Kundencenter</h2>
-        <p>Beispiel Recruiting GmbH · Betreuung aktiv · Ansprechpartner: Demo-Team</p>
+        <p>Beispiel Agentur GmbH · Betreuung aktiv · Ansprechpartner: Demo-Team</p>
       </div>
       <span class="pill pill-wait">Demo mit Beispieldaten</span>
     </div>
@@ -133,7 +133,7 @@
           <form class="ticket-form panel" id="ticket-form" novalidate>
             <h3>Neues Ticket</h3>
             <div class="fields">
-              <label class="wide">Worum geht es?<input id="t-title" name="title" autocomplete="off" placeholder="z. B. Neue Kategorie für Initiativbewerbungen"></label>
+              <label class="wide">Worum geht es?<input id="t-title" name="title" autocomplete="off" placeholder="z. B. Neue Kategorie für Rückrufwünsche"></label>
               <label>Art<select id="t-kind" name="kind"><option>Fehler</option><option selected>Änderungswunsch</option><option>Frage</option></select></label>
               <label>Priorität<select id="t-prio" name="prio"><option>Niedrig</option><option selected>Normal</option><option>Hoch</option></select></label>
               <label class="wide">Beschreibung<textarea id="t-desc" name="desc" rows="3" placeholder="Was ist passiert oder was soll sich ändern?"></textarea></label>
@@ -200,7 +200,7 @@
         <button type="button" data-sample="spam" aria-pressed="false">Spam</button>
         <button type="button" data-sample="unklar" aria-pressed="false">Unklar</button>
       </div>
-      <textarea id="msg" name="msg" rows="5">Hallo, wir sind eine kleine Recruiting-Agentur und tragen jede Bewerbung von Hand ins CRM ein. Was würde es kosten, das zu automatisieren?
+      <textarea id="msg" name="msg" rows="5">Hallo, wir sind eine kleine Agentur und tragen jede Kundenanfrage von Hand ins CRM ein. Was würde es kosten, das zu automatisieren?
 
 Viele Grüße
 Jana Köhler</textarea>
@@ -231,7 +231,7 @@ Jana Köhler</textarea>
           <div class="scenarios" id="scenario-list" role="group" aria-label="Szenario wählen"></div>
           <form class="panel scenario-form" id="scenario-form" novalidate>
             <h3 id="sc-title">Wähle ein Szenario</h3>
-            <label class="wide">Was brauchst du genau?<textarea id="sc-text" rows="3" placeholder="z. B. Bewerbungen kommen per Mail und per Formular, wir tragen alles von Hand ins CRM ein."></textarea></label>
+            <label class="wide">Was brauchst du genau?<textarea id="sc-text" rows="3" placeholder="z. B. Anfragen kommen per Mail und per Formular, wir tragen alles von Hand ins CRM ein."></textarea></label>
             <p class="form-error" id="sc-error" role="alert" hidden>Bitte wähle ein Szenario und beschreib kurz, was du brauchst.</p>
             <button type="submit" class="btn">Ticket anlegen</button>
           </form>
@@ -259,7 +259,7 @@ Jana Köhler</textarea>
             <h3>Was wir diese Woche gemacht haben</h3>
             <ul class="ticks">
               <li>Ansprechpartner in allen Antwortvorlagen aktualisiert und mit 10 Testanfragen geprüft</li>
-              <li>Kategorie „Initiativbewerbung“ vorbereitet, Testlauf folgt zur Freigabe</li>
+              <li>Kategorie „Rückrufwunsch“ vorbereitet, Testlauf folgt zur Freigabe</li>
               <li>Ein Hinweis in der CRM-Pflege: doppelte Mailadresse, zusammengeführt</li>
             </ul>
           </div>
@@ -276,9 +276,9 @@ Jana Köhler</textarea>
           <article class="doc panel" id="doc-ablauf">
             <h3>Anfrage-Autopilot, Version 1.2</h3>
             <ol class="steps">
-              <li>Neue Mail an bewerbung@ oder Eintrag im Kontaktformular.</li>
-              <li>Ein Sprachmodell ordnet ein: Lead, Bewerbung, Support, Spam oder unklar, dazu die Dringlichkeit.</li>
-              <li>Leads und Bewerbungen werden im CRM angelegt oder einem bestehenden Kontakt zugeordnet.</li>
+              <li>Neue Mail an anfrage@ oder Eintrag im Kontaktformular.</li>
+              <li>Ein Sprachmodell ordnet ein: Lead, Rückruf, Support, Spam oder unklar, dazu die Dringlichkeit.</li>
+              <li>Leads und Rückrufwünsche werden im CRM angelegt oder einem bestehenden Kontakt zugeordnet.</li>
               <li>Für Leads entsteht ein Antwortentwurf. Er wartet unter „Freigaben“.</li>
               <li>Unklare Fälle gehen mit Begründung an Sara Winter. Spam wird markiert, nicht gelöscht.</li>
               <li>Schlägt ein Schritt fehl, landet die Anfrage in der Fehlerliste und wir bekommen eine Meldung.</li>
@@ -292,7 +292,7 @@ Jana Köhler</textarea>
               <thead><tr><th scope="col">Nr.</th><th scope="col">Fall</th><th scope="col">Erwartet</th><th scope="col">Ergebnis</th></tr></thead>
               <tbody>
                 <tr><td>1</td><td>Anfrage Personalberatung</td><td>Lead</td><td class="ok">bestanden</td></tr>
-                <tr><td>2</td><td>Bewerbung mit Anhang</td><td>Bewerbung</td><td class="ok">bestanden</td></tr>
+                <tr><td>2</td><td>Rückrufwunsch mit Telefonnummer</td><td>Rückruf</td><td class="ok">bestanden</td></tr>
                 <tr><td>3</td><td>Rückfrage zum Angebot</td><td>Lead</td><td class="ok">bestanden</td></tr>
                 <tr><td>4</td><td>Login funktioniert nicht</td><td>Support</td><td class="ok">bestanden</td></tr>
                 <tr><td>5</td><td>Newsletter-Werbung</td><td>Spam</td><td class="ok">bestanden</td></tr>
@@ -308,7 +308,7 @@ Jana Köhler</textarea>
           <article class="doc panel" id="doc-daten" hidden>
             <h3>Datenfluss und Zugänge</h3>
             <dl class="kv">
-              <dt>Liest</dt><dd>Postfach bewerbung@ (nur Lesen), Kontaktformular</dd>
+              <dt>Liest</dt><dd>Postfach anfrage@ (nur Lesen), Kontaktformular</dd>
               <dt>Schreibt</dt><dd>CRM: Kontakte, Deals, Notizen. Keine Löschrechte ohne Freigabe.</dd>
               <dt>KI-Modell</dt><dd>Nur Betreff und Text der Anfrage, keine Anhänge</dd>
               <dt>Speichert</dt><dd>Protokoll der Einordnung, 30 Tage, ohne Mailinhalt</dd>
@@ -339,7 +339,7 @@ Jana Köhler</textarea>
     <h2 id="schluss-title">So eine Betreuung für deinen Betrieb?</h2>
     <div>
       <p>Am Anfang steht ein Ablauf. Beschreib uns, was dich Zeit kostet, und du bekommst eine ehrliche Einschätzung.</p>
-      <a class="btn" href="mailto:info@zippoworkz.com?subject=Ablauf-Check&amp;body=Hallo%20ZippoWorkz%2C%0A%0Adieser%20Ablauf%20kostet%20uns%20gerade%20Zeit%3A%0A%0A-%20Was%20passiert%20heute%20von%20Hand%3F%0A-%20Welche%20Tools%20sind%20beteiligt%3F%0A-%20Wie%20oft%20pro%20Woche%3F%0A-%20Wer%20macht%20es%3F%0A%0AViele%20Gr%C3%BC%C3%9Fe">Ablauf-Check anfragen</a>
+      <a class="btn" href="kontakt">Ablauf-Check anfragen</a>
       <p class="contact">Der Einstieg: <a class="link" href="./#autopilot">Anfrage-Autopilot für 1.490 €</a></p>
     </div>
   </div>
@@ -352,6 +352,8 @@ Jana Köhler</textarea>
       <a href="anfragen-automatisieren">Ratgeber: Anfragen automatisieren</a>
       <a href="fallbeispiele">Fallbeispiele</a>
       <a href="demo">Kundencenter (Demo)</a>
+      <a href="https://www.fiverr.com/zippoworkz" rel="noopener">Fiverr</a>
+      <a href="https://www.linkedin.com/in/philipp-zippo-825424441" rel="noopener">LinkedIn</a>
       <a href="impressum">Impressum</a>
       <a href="datenschutz">Datenschutz</a>
       <a href="nutzungsbedingungen">AGB</a>
