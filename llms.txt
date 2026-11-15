@@ -1,6 +1,6 @@
 # ZippoWorkz
 
-> ZiPPoworkz entwickelt betriebliche KI-Workflows für Agenturen, Recruiting und Dienstleister. Das Team verbindet menschliche Projektverantwortung mit KI-gestützter Umsetzung, Tests und Monitoring. Änderungen werden vor dem Livegang geprüft. Dazu reparieren und sichern wir KI-gebaute Apps und richten lokale KI auf eigenen Rechnern ein.
+> ZiPPoworkz entwickelt betriebliche KI-Workflows für Agenturen und Dienstleister. Das Team verbindet menschliche Projektverantwortung mit KI-gestützter Umsetzung, Tests und Monitoring. Änderungen werden vor dem Livegang geprüft. Dazu reparieren und sichern wir KI-gebaute Apps und richten lokale KI auf eigenen Rechnern ein.
 
 ## KI-Workflows
 - Ablauf-Check: kostenlos. Ehrliche Einschätzung, ob sich ein Ablauf automatisieren lässt.

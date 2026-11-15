@@ -261,7 +261,7 @@
 
   // ---------- samples ----------
   var SAMPLES = {
-    lead: "Hallo, wir sind eine kleine Recruiting-Agentur und tragen jede Bewerbung von Hand ins CRM ein. Was würde es kosten, das zu automatisieren?\n\nViele Grüße\nJana Köhler",
+    lead: "Hallo, wir sind eine kleine Agentur und tragen jede Kundenanfrage von Hand ins CRM ein. Was würde es kosten, das zu automatisieren?\n\nViele Grüße\nJana Köhler",
     support: "Hi, der Rechnungslink aus eurer letzten Mail funktioniert nicht. Könnt ihr helfen?\n\nLG Murat Demir",
     spam: "Glückwunsch, Sie haben gewonnen! Klick hier für garantierte Backlinks und Platz 1 bei Google.",
     unklar: "Hey, kurze Frage zu letzter Woche. Hast du kurz Zeit?\nTom"
