@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TOP = {"index.html", "anfragen-automatisieren.html", "fallbeispiele.html", "kontakt.html", "demo.html", "milo.html", "impressum.html", "datenschutz.html",
-       "nutzungsbedingungen.html", "widerruf.html", "404.html", "llms.txt", "robots.txt", "sitemap.xml", ".htaccess"}
+       "nutzungsbedingungen.html", "widerruf.html", "404.html", "tiktok-callback.html", "llms.txt", "robots.txt", "sitemap.xml", ".htaccess"}
 # Self-contained demo pages, shipped as whole folders.
 DEMOS = ("app-demo", "geo-demo", "agent-demo")
 REF = re.compile(r'(?:href|src)="([^"#?]+)', re.I)
