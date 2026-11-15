@@ -11,13 +11,13 @@ const SAMPLE = [
 const CHECKS = {
   before: [
     { ok: false, name: "Row level security", detail: "policy bookings_select USING (true)" },
-    { ok: false, name: "Auth redirect", detail: "redirect_to = http://localhost:3000" },
+    { ok: false, name: "Auth redirect", detail: "redirect → localhost:3000" },
     { ok: false, name: "Keys in browser", detail: "service_role key found in bundle.js" },
     { ok: true, name: "Build", detail: "vite build passed" },
   ],
   after: [
     { ok: true, name: "Row level security", detail: "USING (auth.uid() = owner_id)" },
-    { ok: true, name: "Auth redirect", detail: "redirect_to = https://your-app.example" },
+    { ok: true, name: "Auth redirect", detail: "redirect → your-app.example" },
     { ok: true, name: "Keys in browser", detail: "anon key only, secret on server" },
     { ok: true, name: "Build", detail: "vite build passed, deployed" },
   ],
