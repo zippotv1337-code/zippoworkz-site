@@ -9,7 +9,7 @@
   if (!form) return;
   var status = document.getElementById("form-status");
   var LABELS = { ablauf: "Was passiert heute von Hand? *", app: "Was funktioniert an deiner App nicht? *",
-                 lokal: "Wofür soll die lokale KI da sein, und welcher Rechner ist da? *", anderes: "Worum geht es genau? *" };
+                 lokal: "Wofür soll die lokale KI da sein, und welcher Rechner ist da? *", geo: "Wie heißt deine Firma, wo bist du tätig, und welche Fragen stellen deine Kunden? *", anderes: "Worum geht es genau? *" };
 
   // Preselect the topic from links like kontakt?thema=app
   var preset = new URLSearchParams(location.search).get("thema");

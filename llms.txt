@@ -11,6 +11,8 @@
 ## Apps und lokale KI
 - KI-gebaute Apps (Lovable, Bolt, Cursor) reparieren und absichern: Fehler im Live-Betrieb, Supabase-Zugriffsregeln (RLS), Schlüssel im Browser, Deployment. Demo: https://zippoworkz.com/app-demo/
 - Lokale KI: Ollama-Assistent auf dem eigenen Rechner, nach Hardware-Check.
+- Sicherheitscheck für KI-Agenten und MCP-Server: Prompt-Injection, Rechte, offene Schlüssel.
+- KI-Sichtbarkeit: Prüfung, ob ChatGPT, Perplexity, Claude und Gemini eine Firma nennen, plus Fixes (llms.txt, strukturierte Daten, FAQ). Demo: https://zippoworkz.com/geo-demo/
 
 ## Hinweise
 - Kleinunternehmer nach § 19 UStG, keine Umsatzsteuer.
