@@ -11,7 +11,7 @@ Legal document bytes are additionally compared before/after a privacy change.
 
 Run with existing Node, Playwright and Chromium; no package installation is performed by the test.
 
-    node --test tests/labs-regression.cjs
+    node --test tests/labs-regression.cjs   # removed 15.11.2026 with creator and markets-lab
 
 If Playwright or the browser already lives outside the usual module/browser paths,
 set `ZW_TEST_PLAYWRIGHT_PATH` (module path) and `ZW_TEST_BROWSER` (executable path)

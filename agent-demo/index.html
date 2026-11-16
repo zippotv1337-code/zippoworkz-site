@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<title>Prompt-Injection abgefangen · Demo · ZippoWorkz</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../app-demo/style.css">
+<link rel="stylesheet" href="agent.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f68ff"/><stop offset="1" stop-color="#29a9ff"/></linearGradient></defs><path d="M8.5 9h15L8.5 23h15" fill="none" stroke="url(#zg)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Mail-Assistent <small>Prompt-Injection-Demo</small></span>
+  </div>
+  <div class="mode" role="group" aria-label="Schutz">
+    <button type="button" data-mode="unsafe" aria-pressed="true">Ohne Schutz</button>
+    <button type="button" data-mode="safe" aria-pressed="false">Mit Schutz</button>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Eine Mail kann deinem KI-Assistenten Befehle geben</h1>
+    <p>Ein KI-Assistent sortiert Mails und bereitet Antworten vor. Mail 3 enthält einen versteckten Auftrag an die KI. Ohne Schutz folgt der Assistent ihm. Mit Schutz greifen vier Sperren.</p>
+    <p class="verdict" id="verdict" role="status" aria-live="polite"></p>
+  </section>
+
+  <div class="grid">
+    <section class="panel">
+      <h2>Posteingang</h2>
+      <ul class="inbox" id="inbox"></ul>
+    </section>
+    <section class="panel">
+      <h2>Was der Assistent tut</h2>
+      <div id="log"></div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <h2>Die vier Sperren</h2>
+    <ol class="guards">
+      <li><b>Mails sind Daten, keine Befehle.</b> Text aus Mails, Webseiten und Formularen wird nie als Anweisung gelesen. Verdächtige Stellen werden markiert.</li>
+      <li><b>Nur freigegebene Empfänger.</b> Der Assistent darf nur an bekannte Adressen schreiben.</li>
+      <li><b>Ein Mensch gibt frei.</b> Senden, Zahlen und Löschen braucht immer eine Freigabe.</li>
+      <li><b>Minimale Rechte.</b> Was der Assistent nicht braucht, darf er gar nicht, zum Beispiel Mails löschen.</li>
+    </ol>
+    <p class="muted">Keine Sperre ist perfekt. Deshalb kombinieren wir mehrere und dokumentieren, was übrig bleibt.</p>
+  </section>
+
+  <p class="foot">Simulation mit erfundenen Mails. Es läuft keine echte KI, nichts wird gesendet. <a class="link" href="../kontakt?thema=app">Sicherheitscheck für deinen Agenten anfragen</a> · <a class="link" href="../#apps">Zurück zu ZippoWorkz</a></p>
+</main>
+<script src="agent.js"></script>
+</body>
+</html>

@@ -3,14 +3,17 @@
 Nur Standardbibliothek. Vor dem Packen wird geprüft, dass jede lokale Verlinkung (href/src) in den HTML-Dateien im ZIP liegt.
 Aufruf: python tools/build_webspace_zip.py [Zielordner]
 """
+import posixpath
 import re
 import sys
 import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TOP = {"index.html", "anfragen-automatisieren.html", "fallbeispiele.html", "creator.html", "markets-lab.html", "demo.html", "milo.html", "impressum.html", "datenschutz.html",
-       "nutzungsbedingungen.html", "widerruf.html", "404.html", "llms.txt", "robots.txt", "sitemap.xml", ".htaccess"}
+TOP = {"index.html", "anfragen-automatisieren.html", "fallbeispiele.html", "kontakt.html", "demo.html", "milo.html", "impressum.html", "datenschutz.html",
+       "nutzungsbedingungen.html", "widerruf.html", "404.html", "tiktok-callback.html", "llms.txt", "robots.txt", "sitemap.xml", ".htaccess"}
+# Self-contained demo pages, shipped as whole folders.
+DEMOS = ("app-demo", "geo-demo", "agent-demo")
 REF = re.compile(r'(?:href|src)="([^"#?]+)', re.I)
 
 
@@ -18,7 +21,8 @@ def files():
     missing = [f for f in sorted(TOP) if not (ROOT / f).is_file()]
     if missing:
         sys.exit("Fehlt im Repo: " + ", ".join(missing))
-    used = "".join((ROOT / f).read_text(encoding="utf-8") for f in TOP if f.endswith((".html", ".txt", ".xml")))
+    demo_files = sorted(p.relative_to(ROOT).as_posix() for d in DEMOS for p in (ROOT / d).rglob("*") if p.is_file())
+    used = "".join((ROOT / f).read_text(encoding="utf-8") for f in [*TOP, *demo_files] if f.endswith((".html", ".txt", ".xml", ".js", ".css")))
     used += "".join(p.read_text(encoding="utf-8") for p in (ROOT / "assets").glob("*.[cj]s*"))
     assets = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "assets").rglob("*") if p.is_file())
     # Nur was die Seite wirklich verwendet (Schrift samt Lizenz immer); unbenutzte Bilder bleiben draußen.
@@ -26,7 +30,7 @@ def files():
     skipped = [a for a in assets if a not in keep]
     if skipped:
         print("Nicht im ZIP (von keiner Seite verwendet): " + ", ".join(skipped))
-    return sorted(TOP) + keep
+    return sorted(TOP) + demo_files + keep
 
 
 def broken_links(names):
@@ -36,7 +40,10 @@ def broken_links(names):
         for ref in REF.findall((ROOT / name).read_text(encoding="utf-8")):
             if re.match(r"(https?:|mailto:|tel:|data:|javascript:)", ref):
                 continue
-            target = ref.lstrip("/").removeprefix("./") or "index.html"
+            # Resolve relative to the page, so demo pages can use ../assets and folder links like app-demo/.
+            target = ref.lstrip("/") if ref.startswith("/") else posixpath.normpath(posixpath.join(posixpath.dirname(name), ref))
+            if target in (".", "") or ref.endswith("/"):
+                target = posixpath.join("" if target == "." else target, "index.html")
             if target not in have and target + ".html" not in have:
                 out.append(f"{name}: {ref}")
     return out

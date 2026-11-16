@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<title>Booking App · Leak Fix Demo · ZippoWorkz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="zg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f68ff"/><stop offset="1" stop-color="#29a9ff"/></linearGradient></defs><path d="M8.5 9h15L8.5 23h15" fill="none" stroke="url(#zg)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Booking App <small>leak fix demo</small></span>
+  </div>
+  <div class="mode" role="group" aria-label="Version of the app">
+    <button type="button" data-mode="before" aria-pressed="true">Before fix</button>
+    <button type="button" data-mode="after" aria-pressed="false">After fix</button>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <h1 id="headline"></h1>
+    <p id="lead"></p>
+    <div class="score"><span id="score"></span> checks passed</div>
+  </section>
+
+  <section class="checks" aria-label="Security checks" id="checks"></section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>My bookings</h2>
+      <label class="who">Signed in as
+        <select id="user"><option value="anna">Anna (sample)</option><option value="ben">Ben (sample)</option></select>
+      </label>
+    </div>
+    <pre class="query" id="query"></pre>
+    <ul class="list" id="list" aria-live="polite"></ul>
+  </section>
+
+  <section class="panel">
+    <h2>New booking</h2>
+    <form id="form" novalidate>
+      <label>Date<input type="date" id="date" required><span class="err" id="date-err"></span></label>
+      <label>Service<select id="service" required><option value="">Choose…</option><option>Haircut</option><option>Colour</option><option>Styling</option></select><span class="err" id="service-err"></span></label>
+      <label>Price (€)<input type="number" id="price" min="1" step="0.5" inputmode="decimal" placeholder="45" required><span class="err" id="price-err"></span></label>
+      <button type="submit">Add booking</button>
+    </form>
+  </section>
+
+  <p class="foot">Demo with sample data. No real backend, no real customers. <button type="button" id="reset" class="link">Reset demo</button> · <a class="link" href="../#apps">Back to ZippoWorkz</a></p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
