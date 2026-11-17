@@ -44,6 +44,14 @@ test('local MCP configuration is not tracked for root-based public deployment', 
   assert.match(read('.gitignore'), /^\/\.mcp\.json$/m);
 });
 
+test('Pages publishes only the webspace allowlist, never the repo root', () => {
+  const tracked = execFileSync('git', ['ls-files', '--', 'node_modules'], { cwd: root, encoding: 'utf8' });
+  assert.equal(tracked.trim(), '', 'node_modules must not be tracked');
+  const pages = read('.github/workflows/pages.yml');
+  assert.match(pages, /build_webspace_zip\.py/);
+  assert.match(pages, /path: _site/);
+});
+
 test('webspace allowlist still excludes internal developer and credential files', () => {
   const builder = read('tools/build_webspace_zip.py');
   const allowlist = builder.match(/TOP\s*=\s*\{([\s\S]*?)\}/)?.[1];

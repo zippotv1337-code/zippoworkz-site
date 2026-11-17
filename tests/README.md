@@ -13,6 +13,9 @@ Run with existing Node, Playwright and Chromium; no package installation is perf
 
     node --test tests/labs-regression.cjs   # removed 15.11.2026 with creator and markets-lab
 
+`node_modules` is not tracked (17.11.2026). Install the driver once locally with
+`npm install --no-save playwright-core` and set `ZW_TEST_PLAYWRIGHT_PATH=playwright-core`, as CI does.
+
 If Playwright or the browser already lives outside the usual module/browser paths,
 set `ZW_TEST_PLAYWRIGHT_PATH` (module path) and `ZW_TEST_BROWSER` (executable path)
 for that test process. No credentials are needed.

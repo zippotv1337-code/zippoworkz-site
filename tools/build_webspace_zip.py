@@ -14,6 +14,8 @@ TOP = {"index.html", "anfragen-automatisieren.html", "fallbeispiele.html", "kont
        "nutzungsbedingungen.html", "widerruf.html", "404.html", "tiktok-callback.html", "llms.txt", "robots.txt", "sitemap.xml", ".htaccess"}
 # Self-contained demo pages, shipped as whole folders.
 DEMOS = ("app-demo", "geo-demo", "agent-demo")
+# Von außen verlinkt (Bewerbungs-Mails), auch wenn keine Seite sie nutzt.
+EXTERNAL = {"assets/email-banner.png"}
 REF = re.compile(r'(?:href|src)="([^"#?]+)', re.I)
 
 
@@ -26,7 +28,7 @@ def files():
     used += "".join(p.read_text(encoding="utf-8") for p in (ROOT / "assets").glob("*.[cj]s*"))
     assets = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "assets").rglob("*") if p.is_file())
     # Nur was die Seite wirklich verwendet (Schrift samt Lizenz immer); unbenutzte Bilder bleiben draußen.
-    keep = [a for a in assets if a.startswith("assets/fonts/") or Path(a).name in used]
+    keep = [a for a in assets if a.startswith("assets/fonts/") or a in EXTERNAL or Path(a).name in used]
     skipped = [a for a in assets if a not in keep]
     if skipped:
         print("Nicht im ZIP (von keiner Seite verwendet): " + ", ".join(skipped))
