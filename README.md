@@ -2,7 +2,7 @@
 
 ## Datenschutz-/Security-Delta, 18.10.2026
 
-- Live-Readback: GitHub Pages, `main` am Repository-Root, HTTPS erzwungen. Die Apache-/IONOS-Anleitung unten ist ein alternativer Deployment-Pfad, kein Nachweis des aktuellen Hostings oder eines AVV.
+- Hosting: GitHub Pages über `.github/workflows/pages.yml` (seit 17.11.2026). Veröffentlicht wird nur die Allowlist aus `tools/build_webspace_zip.py`; README, `tests/`, `tools/` sind nicht mehr öffentlich. Neue Seiten oder Verifizierungsdateien müssen dort in `TOP` stehen. HTTPS erzwungen. Die Apache-/IONOS-Anleitung unten ist ein alternativer Deployment-Pfad, kein Nachweis des aktuellen Hostings oder eines AVV.
 - Marketing, allgemeine SEO-Daten und Demo verwenden die Marke bzw. ein Demo-Team. Pflicht-Rechtstexte wurden nicht verändert; ihre fachliche Prüfung bleibt erforderlich.
 - `.mcp.json` ist ausschließlich lokale, ignorierte Entwickler-Konfiguration und wird nicht mehr getrackt. Die vorhandene lokale Datei bleibt erhalten; keine Credentials in diese Dokumentation übernehmen. Auch der Webspace-ZIP-Builder schließt Entwickler-Konfigurationen aus.
 - Git-Entfernung ist keine Historien-/Cache-Löschung und keine bereits erfolgte Live-Bereinigung. Nach geprüftem Merge/Deployment muss `/.mcp.json` erneut auf Nicht-Auslieferung geprüft werden. Keine automatische Rotation oder History-Rewrite.
